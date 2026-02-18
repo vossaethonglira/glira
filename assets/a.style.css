@@ -1,28 +1,23 @@
 :root{
-  /* Europe-style: calm, readable, institutional */
   --bg: #0b1220;
-  --bg2: #0a1020;
+  --bg2:#0a1020;
   --panel: rgba(255,255,255,0.06);
-  --panel2: rgba(255,255,255,0.08);
   --line: rgba(255,255,255,0.12);
 
   --text: rgba(255,255,255,0.92);
   --muted: rgba(255,255,255,0.72);
 
-  /* restrained accent */
-  --accent: #4da3ff;
-  --accent2: #6b7cff;
-  --ok: #37d67a;
-  --warn: #ffcc66;
+  --accent:#4da3ff;
+  --accent2:#6b7cff;
+  --ok:#37d67a;
 
-  /* layout */
   --max: 1200px;
   --radius: 16px;
   --radius2: 22px;
+
   --shadow: 0 10px 30px rgba(0,0,0,0.28);
   --shadow2: 0 8px 22px rgba(0,0,0,0.22);
 
-  /* typography scale */
   --h1: 44px;
   --h2: 28px;
   --h3: 20px;
@@ -31,14 +26,12 @@
   --small: 13px;
 }
 
-/* =========================
-   Base
-   ========================= */
+/* Base */
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
 body{
   margin:0;
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
   font-size: var(--body);
   line-height: 1.6;
   color: var(--text);
@@ -47,188 +40,131 @@ body{
     radial-gradient(900px 600px at 92% 2%, rgba(107,124,255,0.14), transparent 60%),
     linear-gradient(180deg, var(--bg2), var(--bg));
 }
-
-/* Links */
 a{ color:inherit; text-decoration:none; }
 a:hover{ text-decoration: underline; }
+img{ max-width:100%; height:auto; display:block; }
 
-/* Global responsive images (IMPORTANT) */
-img{
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Code */
 code{
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
-  font-size: 0.95em;
-  padding: 0.12em 0.36em;
+  font-family: ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+  font-size: .95em;
+  padding: .12em .36em;
   border-radius: 8px;
   background: rgba(255,255,255,0.08);
   border: 1px solid rgba(255,255,255,0.10);
 }
 
-/* Containers */
 .container{
   max-width: var(--max);
   margin: 0 auto;
   padding: 0 20px;
 }
+.section{ padding:56px 0; }
 
-.section{ padding: 56px 0; }
-.section.tight{ padding: 34px 0; }
+/* Typography */
+.h1{ font-size:var(--h1); line-height:1.12; margin:14px 0 10px; letter-spacing:-.2px; }
+.h2{ font-size:var(--h2); margin:0 0 10px; letter-spacing:-.1px; }
+.h3{ font-size:var(--h3); margin:0 0 8px; }
+.p{ color:var(--muted); margin:0; max-width:78ch; }
+.small{ font-size:var(--small); color:var(--muted); }
+.hr{ height:1px; background:var(--line); margin:22px 0; }
 
-/* =========================
-   Typography
-   ========================= */
-.h1{
-  font-size: var(--h1);
-  line-height: 1.12;
-  margin: 14px 0 10px;
-  letter-spacing: -0.2px;
-}
-.h2{
-  font-size: var(--h2);
-  margin: 0 0 10px;
-  letter-spacing: -0.1px;
-}
-.h3{
-  font-size: var(--h3);
-  margin: 0 0 8px;
-}
-.p{
-  color: var(--muted);
-  margin: 0;
-  max-width: 78ch;
-}
-.small{
-  font-size: var(--small);
-  color: var(--muted);
-}
-.hr{
-  height: 1px;
-  background: var(--line);
-  margin: 22px 0;
-}
-
-/* Kicker (European institutional pill) */
+/* Kicker */
 .kicker{
-  display: inline-flex;
-  gap: 10px;
-  align-items: center;
-  padding: 6px 12px;
-  border: 1px solid var(--line);
+  display:inline-flex;
+  gap:10px;
+  align-items:center;
+  padding:6px 12px;
+  border:1px solid var(--line);
   background: rgba(0,0,0,0.18);
-  border-radius: 999px;
-  color: var(--muted);
-  font-size: 12px;
+  border-radius:999px;
+  color:var(--muted);
+  font-size:12px;
 }
 .dot{
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 14px rgba(77,163,255,0.45);
+  width:7px; height:7px; border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 14px rgba(77,163,255,.45);
 }
 
-/* =========================
-   Buttons
-   ========================= */
+/* Buttons */
 .btnrow{
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin-top: 18px;
+  display:flex;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:18px;
 }
 .btn{
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  padding: 10px 14px;
-  border-radius: 12px;
-  border: 1px solid var(--line);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  padding:10px 14px;
+  border-radius:12px;
+  border:1px solid var(--line);
   background: rgba(255,255,255,0.06);
-  color: var(--text);
-  cursor: pointer;
-  text-decoration: none;
+  color:var(--text);
+  cursor:pointer;
+  text-decoration:none;
 }
-.btn:hover{
-  background: rgba(255,255,255,0.10);
-  text-decoration: none;
-}
+.btn:hover{ background: rgba(255,255,255,0.10); text-decoration:none; }
 .btn.primary{
   border-color: rgba(77,163,255,0.55);
   background: linear-gradient(135deg, rgba(77,163,255,0.18), rgba(107,124,255,0.14));
   box-shadow: 0 10px 22px rgba(77,163,255,0.10);
 }
-.btn.ghost{ background: transparent; }
 .btn:focus{
-  outline: 2px solid rgba(77,163,255,0.55);
-  outline-offset: 2px;
+  outline:2px solid rgba(77,163,255,0.55);
+  outline-offset:2px;
 }
 
-/* =========================
-   Cards / Layout Grid
-   ========================= */
+/* Cards / Grid */
 .card{
   background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.04));
-  border: 1px solid var(--line);
+  border:1px solid var(--line);
   border-radius: var(--radius);
   box-shadow: var(--shadow2);
 }
-.card.pad{ padding: 18px; }
-.card.soft{ box-shadow: none; }
+.card.pad{ padding:18px; }
 
-.grid{ display:grid; gap: 14px; }
-.grid.cols2{ grid-template-columns: repeat(2, minmax(0,1fr)); }
-.grid.cols3{ grid-template-columns: repeat(3, minmax(0,1fr)); }
-.grid.cols4{ grid-template-columns: repeat(4, minmax(0,1fr)); }
-.grid.cols5{ grid-template-columns: repeat(5, minmax(0,1fr)); }
+.grid{ display:grid; gap:14px; }
+.grid.cols2{ grid-template-columns:repeat(2,minmax(0,1fr)); }
+.grid.cols3{ grid-template-columns:repeat(3,minmax(0,1fr)); }
+.grid.cols4{ grid-template-columns:repeat(4,minmax(0,1fr)); }
+.grid.cols5{ grid-template-columns:repeat(5,minmax(0,1fr)); }
 
 /* Responsive */
-@media (max-width: 980px){
-  :root{ --h1: 36px; }
-  .grid.cols3{ grid-template-columns: 1fr; }
-  .grid.cols4{ grid-template-columns: 1fr 1fr; }
+@media (max-width:980px){
+  :root{ --h1:36px; }
+  .grid.cols3{ grid-template-columns:1fr; }
+  .grid.cols4{ grid-template-columns:1fr 1fr; }
 }
-@media (max-width: 640px){
-  :root{ --h1: 30px; --h2: 24px; }
-  .grid.cols2{ grid-template-columns: 1fr; }
-  .grid.cols4{ grid-template-columns: 1fr; }
+@media (max-width:640px){
+  :root{ --h1:30px; --h2:24px; }
+  .grid.cols2{ grid-template-columns:1fr; }
+  .grid.cols4{ grid-template-columns:1fr; }
 }
 
-/* =========================
-   Badge
-   ========================= */
+/* Badge */
 .badge{
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  padding: 6px 10px;
-  border-radius: 999px;
-  border: 1px solid var(--line);
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
   background: rgba(0,0,0,0.15);
-  color: var(--muted);
-  font-size: 12px;
+  color:var(--muted);
+  font-size:12px;
 }
-.badge strong{
-  color: var(--text);
-  font-weight: 650;
-}
+.badge strong{ color:var(--text); font-weight:650; }
 
 /* =========================
-   Page Banner (21:9 masthead feel)
+   Banner (21:9)
    ========================= */
 .pageBanner{
   position: relative;
   padding: 22px 0 16px;
-  border-bottom: 0 !important;
-  box-shadow: 0 12px 28px rgba(0,0,0,.22);
-}
-
-  /* Replace image filename if yours differs */
+  border-bottom: none; /* 避免出现“那条线” */
   background-image:
     linear-gradient(180deg, rgba(10,16,28,.35), rgba(10,16,28,.82)),
     url("/assets/c.img/glira-banner-21x9.jpg");
@@ -239,78 +175,72 @@ code{
 .pageBannerInner{
   display:flex;
   align-items:center;
-  min-height: clamp(120px, 10vw, 200px);
+  min-height: clamp(140px, 10vw, 220px);
+
+  overflow:hidden;
+  border-radius:18px;
+  border:1px solid rgba(255,255,255,.10);
+  background: rgba(10,14,26,.28);
+  box-shadow: 0 18px 50px rgba(0,0,0,.30);
 }
-.bannerKicker{
-  font-size: 12px;
-  letter-spacing: .18em;
-  text-transform: uppercase;
-  opacity: .85;
-}
+.bannerText{ padding: 18px 22px; }
 .bannerTitle{
-  margin: 8px 0 0;
+  margin: 0;
   font-size: clamp(22px, 2.2vw, 34px);
   line-height: 1.15;
+  letter-spacing: -0.2px;
 }
 
 /* =========================
-   Header / Nav (EU-style)
-   Banner shows at top; only navbar sticks on scroll
+   Header / Nav (full-width plate)
    ========================= */
-.header{
-  position: relative; /* banner stays normal */
-  z-index: 50;
-}
+.header{ position: relative; z-index: 50; }
 
-/* Sticky only for navbar (better UX) */
-.navbar{
+/* 全宽底板（贯穿左右） */
+.navBarWrap{
   position: sticky;
   top: 0;
   z-index: 60;
+  background: rgba(10,16,28,0.72);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid var(--line);
+}
 
+/* 内部内容仍然跟随 container 宽度 */
+.navbar{
   display:flex;
   align-items:center;
   justify-content:space-between;
   padding: 14px 0;
   gap: 14px;
-
-  backdrop-filter: blur(10px);
-  background: rgba(10,16,28,0.64);
-  border-bottom: 1px solid var(--line);
 }
 
+/* Brand + logo */
 .brand{
   display:flex;
   align-items:center;
   gap: 12px;
   font-weight: 750;
   letter-spacing: 0.2px;
-  text-decoration: none;
   white-space: nowrap;
+  text-decoration:none;
 }
 .brand .logo{
   width: 34px;
   height: 34px;
-  display: block;
   border-radius: 10px;
-  object-fit: contain; /* 如果logo是透明PNG，这个最稳 */
+  object-fit: contain;
   flex: 0 0 auto;
 }
+.brandText{ display:inline-block; }
 
-.mark{
-  width: 34px;
-  height: 34px;
-  border-radius: 12px;
-  border: 1px solid rgba(77,163,255,0.55);
-  background: radial-gradient(circle at 30% 30%, rgba(77,163,255,0.34), rgba(107,124,255,0.18));
-  box-shadow: 0 10px 18px rgba(77,163,255,0.10);
-}
-
+/* Nav links */
 .navlinks{
   display:flex;
   gap: 10px;
   align-items:center;
-  flex-wrap: wrap;
+  flex-wrap:wrap;
 }
 .navlinks a{
   padding: 8px 10px;
@@ -324,25 +254,21 @@ code{
   border-color: var(--line);
   background: rgba(255,255,255,0.05);
 }
-.navlinks a.active{
-  color: var(--text);
-  border-color: rgba(77,163,255,0.45);
-  background: rgba(77,163,255,0.10);
-}
 
+/* Right side CTA smaller */
 .navright{
   display:flex;
-  gap: 10px;
+  gap:10px;
   align-items:center;
 }
-.navright .btn{
-  font-size: 14px;
-  padding: 10px 14px;
-  line-height: 1;          /* 避免按钮显得“高” */
-  white-space: nowrap;     /* 防止 Documents & Annex 换行 */
+.navright .navCta{
+  font-size: 13px;         /* 右侧按钮文字变小 */
+  padding: 9px 12px;
+  line-height: 1;
+  white-space: nowrap;
 }
 
-
+/* Burger */
 .burger{
   display:none;
   width: 42px;
@@ -362,10 +288,6 @@ code{
     align-items:center;
     justify-content:center;
   }
-
-  /* Ensure dropdown positions relative to navbar line */
-  .navbar{ position: sticky; }
-
   .navlinks.open{
     display:flex;
     position:absolute;
@@ -434,22 +356,23 @@ code{
   inset:0;
   background: linear-gradient(90deg, rgba(11,18,32,0.76), rgba(11,18,32,0.28) 55%, rgba(11,18,32,0.66));
 }
-.slideContent{
-  position: relative;
-  max-width: 72ch;
-}
+.slideContent{ position: relative; max-width: 72ch; }
 .slideTitle{
   font-size: 34px;
   line-height: 1.15;
   margin: 0 0 10px;
   letter-spacing: -0.2px;
 }
-.slideText{
-  margin: 0;
-  color: var(--muted);
-}
+.slideText{ margin: 0; color: var(--muted); }
 @media (max-width: 640px){
   .slideTitle{ font-size: 26px; }
+}
+
+/* 轮播图上的按钮文字变小 */
+.heroBtns .btn{
+  font-size: 14px;
+  padding: 9px 12px;
+  border-radius: 12px;
 }
 
 .cControls{
@@ -508,48 +431,10 @@ code{
 }
 .metric:last-child{ border-bottom: none; }
 
-/* Lists */
-.list{
-  margin: 0;
-  padding-left: 18px;
-  color: var(--muted);
-}
+.list{ margin:0; padding-left:18px; color:var(--muted); }
 .list li{ margin: 6px 0; }
 
-/* =========================
-   Page header block
-   ========================= */
-.pageHead{ padding: 22px 0 10px; }
-.pageTitle{
-  font-size: 34px;
-  margin: 10px 0 8px;
-  letter-spacing: -0.2px;
-}
-.pageLead{
-  color: var(--muted);
-  margin: 0;
-  max-width: 78ch;
-}
-
-/* 如果你的 header/nav 有分隔线，把它弱化或去掉 */
-.header{
-  border-bottom: none !important;
-}
-.navbar{
-  box-shadow: none !important;
-}
-.pageBannerInner{
-  overflow: hidden;
-  border-radius: 18px;
-  background: rgba(10,14,26,.55);
-  border: 1px solid rgba(255,255,255,.10);
-  box-shadow: 0 18px 50px rgba(0,0,0,.35);
-}
-.pageBannerInner img{ display:block; width:100%; height:auto; }
-
-/* =========================
-   Footer
-   ========================= */
+/* Footer */
 .footer{
   padding: 30px 0 40px;
   border-top: 1px solid var(--line);
@@ -564,49 +449,4 @@ code{
   .footerGrid{ grid-template-columns: 1fr; }
 }
 .footer a{ color: var(--muted); }
-.footer a:hover{
-  color: var(--text);
-  text-decoration: underline;
-}
-
-/* =========================
-   Icon System (Pillars)
-   - PNG/JPG/SVG all OK
-   ========================= */
-.icon{
-  width: 28px;
-  height: 28px;
-  object-fit: contain;
-  display: inline-block;
-}
-
-/* Fixed icon box for pillar cards */
-.picon{
-  width: 44px;
-  height: 44px;
-  display: grid;
-  place-items: center;
-  border-radius: 12px;
-  background: rgba(255,255,255,.06);
-  border: 1px solid rgba(255,255,255,.10);
-  overflow: hidden;
-}
-
-/* Fit image into the box */
-.picon img{
-  width: 70%;
-  height: 70%;
-  object-fit: contain;
-}
-
-/* Fit inline svg into the box */
-.picon svg{
-  width: 70%;
-  height: 70%;
-  display: block;
-}
-
-@media (max-width: 640px){
-  .picon{ width: 48px; height: 48px; }
-}
-
+.footer a:hover{ color: var(--text); text-decoration: underline; }
