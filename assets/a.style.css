@@ -511,6 +511,22 @@ code{
   max-width: 78ch;
 }
 
+/* 如果你的 header/nav 有分隔线，把它弱化或去掉 */
+.header{
+  border-bottom: none !important;
+}
+.navbar{
+  box-shadow: none !important;
+}
+.pageBannerInner{
+  overflow: hidden;
+  border-radius: 18px;
+  background: rgba(10,14,26,.55);
+  border: 1px solid rgba(255,255,255,.10);
+  box-shadow: 0 18px 50px rgba(0,0,0,.35);
+}
+.pageBannerInner img{ display:block; width:100%; height:auto; }
+
 /* =========================
    Footer
    ========================= */
