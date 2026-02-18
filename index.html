@@ -11,51 +11,50 @@
 <body>
 
 <header class="header">
+
+  <!-- 21:9 Banner -->
   <section class="pageBanner" aria-label="GLIRA banner">
     <div class="container">
       <div class="pageBannerInner">
         <div class="bannerText">
-          <div class="bannerKicker">GLIRA</div>
+          <!-- 你说 banner 上面的 GLIRA 不要：这里我去掉了 kicker -->
           <h1 class="bannerTitle">Global Learning and Innovative<br>Research Alliance</h1>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="container">
-    <div class="navbar" data-nav>
-      <!-- Brand / Home -->
-<a class="brand" href="/" aria-label="GLIRA Home">
-  <img class="logo" src="/assets/c.img/glira-logo.png" alt="GLIRA logo">
-  <span>GLIRA</span>
-</a>
+  <!-- Full-width Nav Plate -->
+  <div class="navBarWrap">
+    <div class="container">
+      <div class="navbar" data-nav>
 
+        <!-- Brand / Home -->
+        <a class="brand" href="/" aria-label="GLIRA Home">
+          <img class="logo" src="/assets/c.img/glira-logo.png" alt="GLIRA logo">
+          <span class="brandText">GLIRA</span>
+        </a>
 
-      <!-- Primary navigation -->
-      <nav class="navlinks" data-navlinks aria-label="Primary navigation">
-        <a href="/about/">About</a>
-        <a href="/certification/">Frameworks</a>
-        <a href="/programs/">Programmes</a>
-        <a href="/partnership/">Partnerships</a>
-        <a href="/docs/">Documents</a>
-        <a href="/contact/">Contact</a>
-      </nav>
+        <!-- Primary navigation -->
+        <nav class="navlinks" data-navlinks aria-label="Primary navigation">
+          <a href="/about/">About</a>
+          <a href="/certification/">Frameworks</a>
+          <a href="/programs/">Programmes</a>
+          <a href="/partnership/">Partnerships</a>
+          <a href="/docs/">Documents</a>
+          <a href="/contact/">Contact</a>
+        </nav>
 
-      <!-- Right side -->
-      <div class="navright">
-        <a class="btn primary" href="/docs/">Documents &amp; Annex</a>
-        <button
-          class="burger"
-          type="button"
-          data-burger
-          aria-label="Open menu"
-          aria-expanded="false"
-        >☰</button>
+        <!-- Right side -->
+        <div class="navright">
+          <a class="btn primary navCta" href="/docs/">Documents &amp; Annex</a>
+          <button class="burger" type="button" data-burger aria-label="Open menu" aria-expanded="false">☰</button>
+        </div>
+
       </div>
     </div>
   </div>
 </header>
-
 
 <main>
   <!-- Region 1: Hero + Carousel -->
@@ -70,6 +69,7 @@
              data-interval="5200"
              aria-label="Homepage carousel">
           <div class="slides" data-slides>
+
             <section class="slide" aria-label="Slide 1">
               <div class="slideBg" style="background-image:url('/assets/c.img/hero-1.jpg');"></div>
               <div class="slideOverlay"></div>
@@ -79,7 +79,7 @@
                   A forward-facing certification that validates real growth in meta-cognition, meta-abilities,
                   and adaptive decision-making for future societies.
                 </p>
-                <div class="btnrow">
+                <div class="btnrow heroBtns">
                   <a class="btn primary" href="/certification/">Explore the Certification</a>
                   <a class="btn" href="/docs/">View Annex / Whitepaper</a>
                 </div>
@@ -95,7 +95,7 @@
                   Focus on transferable inner capabilities: reflective regulation, systems thinking,
                   strategic planning, and collaboration under uncertainty.
                 </p>
-                <div class="btnrow">
+                <div class="btnrow heroBtns">
                   <a class="btn primary" href="/programs/">See Programs</a>
                   <a class="btn" href="/about/">Learn What GLIRA Is</a>
                 </div>
@@ -111,12 +111,13 @@
                   Universities, TVET institutions, NGOs, and industry partners co-develop pilots,
                   rubrics, and recognition pathways.
                 </p>
-                <div class="btnrow">
+                <div class="btnrow heroBtns">
                   <a class="btn primary" href="/partnership/">Partnership Pathways</a>
                   <a class="btn" href="/contact/">Contact</a>
                 </div>
               </div>
             </section>
+
           </div>
 
           <div class="cControls">
@@ -161,185 +162,15 @@
     </div>
   </section>
 
-<!-- Region 2: Pillars -->
-<section class="section">
-  <div class="container">
-    <h2 class="h2">Five pillars for future societies</h2>
-    <p class="p">
-      A coherent capability spine: reflective regulation → learning agility → systems &amp; futures reasoning → responsible value creation → collaborative impact.
-    </p>
-
-    <div class="grid cols3" style="margin-top:14px">
-      <div class="card pad">
-        <div class="picon" aria-hidden="true">
-          <img src="/assets/c.img/p1-meta.png" alt="">
-        </div>
-        <div class="badge" style="margin-top:12px"><strong>P1</strong> Reflective Self-Regulation</div>
-        <p class="small" style="margin-top:10px">
-          Maintain stability under uncertainty through reflective regulation, sustainable habits, and resilience-oriented routines.
-        </p>
-      </div>
-
-      <div class="card pad">
-        <div class="picon" aria-hidden="true">
-          <img src="/assets/c.img/p2-regulation.png" alt="">
-        </div>
-        <div class="badge" style="margin-top:12px"><strong>P2</strong> Meta-Cognition &amp; Learning Agility</div>
-        <p class="small" style="margin-top:10px">
-          Strengthen learning agility via meta-cognitive monitoring, bias awareness, and transferable learning strategies.
-        </p>
-      </div>
-
-      <div class="card pad">
-        <div class="picon" aria-hidden="true">
-          <img src="/assets/c.img/p3-systems.png" alt="">
-        </div>
-        <div class="badge" style="margin-top:12px"><strong>P3</strong> Systems &amp; Futures Thinking</div>
-        <p class="small" style="margin-top:10px">
-          Reason across systems and futures with boundary awareness, trade-off thinking, and scenario planning.
-        </p>
-      </div>
-
-      <div class="card pad">
-        <div class="picon" aria-hidden="true">
-          <img src="/assets/c.img/p4-strategy.png" alt="">
-        </div>
-        <div class="badge" style="margin-top:12px"><strong>P4</strong> Responsible Value Creation</div>
-        <p class="small" style="margin-top:10px">
-          Create responsible value through problem framing, solution design, and evidence-linked impact evaluation.
-        </p>
-      </div>
-
-      <div class="card pad">
-        <div class="picon" aria-hidden="true">
-          <img src="/assets/c.img/p5-collaboration.png" alt="">
-        </div>
-        <div class="badge" style="margin-top:12px"><strong>P5</strong> Collaborative &amp; Civic Agency</div>
-        <p class="small" style="margin-top:10px">
-          Build collaborative and civic agency through trust, communication, verification, and shared-governance practice.
-        </p>
-      </div>
-
-      <div class="card pad">
-        <div class="picon" aria-hidden="true">
-          <img src="/assets/c.img/p6-evidence.png" alt="">
-        </div>
-        <div class="badge" style="margin-top:12px"><strong>Evidence</strong> &amp; Assurance</div>
-        <p class="small" style="margin-top:10px">
-          Capabilities are validated through portfolios, rubric-based review, sampling audits, and partner verification.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-  <!-- Region 3: Certification snapshot -->
-  <section class="section">
-    <div class="container">
-      <div class="card pad">
-        <h2 class="h2">Certification as a scalable “evidence grammar”</h2>
-        <p class="p">
-          We treat competence as a verifiable structure: definition → level descriptors → evidence requirements → rubrics → progression policy.
-          This allows cross-context recognition without losing rigor.
-        </p>
-        <div class="hr"></div>
-        <div class="grid cols2">
-          <div>
-            <div class="badge"><strong>Levels</strong> (example)</div>
-            <ul class="list">
-              <li><strong>L1</strong> Foundation: stable routines + basic reflective control</li>
-              <li><strong>L2</strong> Practitioner: applied strategy + evidence of transfer</li>
-              <li><strong>L3</strong> Facilitator: mentoring, evaluation, and ecosystem contribution</li>
-            </ul>
-          </div>
-          <div>
-            <div class="badge"><strong>Evidence</strong> (example)</div>
-            <ul class="list">
-              <li>Reflection logs (metacognitive checkpoints)</li>
-              <li>Artifacts (plans, scenarios, decision records)</li>
-              <li>Peer/mentor observation & verification</li>
-              <li>Impact narrative aligned with rubric</li>
-            </ul>
-          </div>
-        </div>
-        <div class="btnrow" style="margin-top:18px">
-          <a class="btn primary" href="/certification/">Read the full model</a>
-          <a class="btn" href="/docs/">Download Annex A (Levels & Evidence)</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Region 4: Programs preview -->
-  <section class="section">
-    <div class="container">
-      <h2 class="h2">Programs & pilots</h2>
-      <p class="p">Programs are designed as evidence-generating journeys: short cycles, measurable outputs, and partner-ready verification.</p>
-
-      <div class="grid cols3" style="margin-top:14px">
-        <div class="card pad">
-          <div class="badge"><strong>Pilot</strong> 8–12 weeks</div>
-          <p class="small" style="margin-top:10px">Meta-cognition training + evidence portfolio (reflection logs + rubric).</p>
-        </div>
-        <div class="card pad">
-          <div class="badge"><strong>Workshop</strong> 2–4 days</div>
-          <p class="small" style="margin-top:10px">Systems reasoning and scenario planning with structured deliverables.</p>
-        </div>
-        <div class="card pad">
-          <div class="badge"><strong>Partner Lab</strong> ongoing</div>
-          <p class="small" style="margin-top:10px">Joint development of descriptors, assessment tasks, and mapping guides.</p>
-        </div>
-      </div>
-
-      <div class="btnrow">
-        <a class="btn primary" href="/programs/">Go to Programs</a>
-        <a class="btn" href="/partnership/">Become a Partner</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Region 5: Docs + Updates -->
-  <section class="section">
-    <div class="container">
-      <div class="grid cols2">
-        <div class="card pad">
-          <h2 class="h2">Docs & downloads</h2>
-          <p class="p">Place your PDFs in <code>/docs/</code> and link them here. This site supports direct static downloads.</p>
-          <div class="hr"></div>
-          <ul class="list">
-            <li><a href="/docs/">Docs landing page</a></li>
-            <li><a href="/docs/GLIRA-Overview.pdf">GLIRA Overview (PDF)</a> <span class="small">(example filename)</span></li>
-            <li><a href="/docs/SVOS-Annex-A-Levels-and-Evidence.pdf">SVOS Annex A (PDF)</a> <span class="small">(example filename)</span></li>
-          </ul>
-        </div>
-
-        <div class="card pad">
-          <h2 class="h2">Announcements</h2>
-          <p class="p">A lightweight update block—later you can evolve it into a news page or mailing list.</p>
-          <div class="hr"></div>
-          <ul class="list">
-            <li><strong>v0.1</strong> Initial public draft site structure</li>
-            <li>Docs directory enabled for Annex / Whitepaper distribution</li>
-            <li>Partnership pathways defined for pilots and recognition mapping</li>
-          </ul>
-          <div class="btnrow">
-            <a class="btn primary" href="/contact/">Contact</a>
-            <a class="btn" href="/about/">About GLIRA</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- 其余 Region 2~5 你可保持原样 -->
 </main>
 
-<footer class="footer footer">
+<footer class="footer">
   <div class="container">
     <div class="footerGrid">
       <div>
-        <div class="brand" style="margin-bottom:10px">
-          <span class="mark" aria-hidden="true"></span><span>GLIRA</span>
+        <div class="brandFooter" style="margin-bottom:10px">
+          <span>GLIRA</span>
         </div>
         <p class="small">
           A future-oriented certification and research platform for sustainable self-development,
@@ -358,7 +189,7 @@
           <div class="small"><a href="/docs/">Docs</a></div>
         </div>
         <div class="hr"></div>
-        <div class="small">Email: <a href="mailto:contact@your-domain.com">contact@your-domain.com</a></div>
+        <div class="small">Email: <a href="mailto:contact@glira.cc">contact@glira.cc</a></div>
       </div>
     </div>
   </div>
