@@ -335,6 +335,13 @@ code{
   gap: 10px;
   align-items:center;
 }
+.navright .btn{
+  font-size: 14px;
+  padding: 10px 14px;
+  line-height: 1;          /* 避免按钮显得“高” */
+  white-space: nowrap;     /* 防止 Documents & Annex 换行 */
+}
+
 
 .burger{
   display:none;
