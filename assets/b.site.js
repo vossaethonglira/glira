@@ -97,8 +97,31 @@
   carousel.addEventListener("focusin", stopAutoplay);
   carousel.addEventListener("focusout", startAutoplay);
 
+
   // init
   renderDots();
   update();
   startAutoplay();
+})();
+// Nav active link (auto highlight current page)
+(() => {
+  const links = document.querySelectorAll('[data-navlinks] a');
+  if (!links.length) return;
+
+  // Normalize path: "/about/" not "/about/index.html"
+  const current = (location.pathname || '/').replace(/index\.html$/,'');
+  const cur = current.endsWith('/') ? current : current + '/';
+
+  links.forEach(a => {
+    const href = (a.getAttribute('href') || '').replace(/index\.html$/,'');
+    if (!href) return;
+
+    // Home: only active on "/"
+if (href === '/') {
+  if (cur === '/') a.classList.add('active');
+} else {
+  if (cur.startsWith(href)) a.classList.add('active');
+}
+
+  });
 })();
