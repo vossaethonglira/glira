@@ -302,3 +302,96 @@ a{ color:inherit; text-decoration:none; }
   .floatNavItem{ padding: 12px 14px; }
 }
 
+/* ===== HERO VIDEO FULL BLEED ===== */
+.hero { position: relative; height: 100vh; width: 100%; overflow: hidden; }
+.heroMedia { position:absolute; inset:0; }
+.heroVideo { width:100%; height:100%; object-fit: cover; display:block; }
+.heroOverlay { position:absolute; inset:0; background: rgba(0,0,0,.25); }
+
+/* ===== PC hero org name (bottom-left, bigger, ABOVE nav bar) ===== */
+.heroOrgPc{
+  position:absolute;
+  left: 36px;
+  bottom: 120px; /* ensure higher than nav below hero */
+  font-weight: 700;
+  letter-spacing: .06em;
+  font-size: clamp(18px, 2.0vw, 34px); /* bigger */
+  color: rgba(90, 170, 255, .85);
+  text-shadow: 0 0 30px rgba(0,0,0,.55);
+  user-select: none;
+}
+
+/* ===== Mobile multiline org name (left, top 100px, left 30px) ===== */
+.heroOrgMobile{
+  display:none;
+  position:absolute;
+  top: 100px;
+  left: 30px;
+  font-weight: 800;
+  line-height: 1.08;
+  font-size: clamp(26px, 7vw, 44px);
+  letter-spacing: .02em;
+  user-select: none;
+
+  /* blue-black gradient text */
+  background: linear-gradient(180deg, rgba(70,150,255,.95), rgba(5,15,40,.95));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* ===== Header below hero (not floating) ===== */
+.headerBelowHero { position: relative; }
+.headerBelowHero .navWrap { position: relative; }
+
+/* ===== Remove eye button / glance overlay if exists in your old CSS ===== */
+.eyeBtn, .glance { display:none !important; }
+
+/* ===== Desktop: NO right-side rail ===== */
+.rail { display:none !important; }
+
+/* ===== Mobile: right-side floating nav replaces bottom nav ===== */
+.mobileRail{
+  display:none;
+  position: fixed;
+  right: 10px;
+  top: 18%;
+  z-index: 9999;
+  padding: 10px;
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  background: rgba(5, 12, 28, .35);
+  border: 1px solid rgba(120,170,255,.18);
+}
+.mobileRail a{
+  display:block;
+  padding: 10px 12px;
+  margin: 6px 0;
+  border-radius: 14px;
+  font-weight: 700;
+  letter-spacing: .04em;
+  color: rgba(210,230,255,.86);
+  text-decoration:none;
+  background: rgba(10, 25, 55, .18);
+  border: 1px solid rgba(120,170,255,.12);
+}
+.mobileRail a:active{ transform: scale(.98); }
+
+/* ===== Mobile breakpoint behavior ===== */
+@media (max-width: 880px){
+  /* show mobile org name, hide pc org name */
+  .heroOrgPc{ display:none; }
+  .heroOrgMobile{ display:block; }
+
+  /* hide the below-hero header on mobile (bottom nav removed) */
+  .headerBelowHero{ display:none; }
+
+  /* show mobile rail */
+  .mobileRail{ display:block; }
+}
+
+/* ===== Anti-save friction ===== */
+.noSave img, .noSave video{
+  -webkit-user-drag: none;
+  user-drag: none;
+}
