@@ -5,8 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GLIRA — About</title>
   <meta name="description" content="GLIRA — International certification & accreditation alliance." />
-  <link rel="stylesheet" href="assets/css/styles.css" />
+
+  <!-- Add version param to reduce mobile caching issues -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=20260221" />
 </head>
+
 <body data-page="home">
 
 <header class="header" id="siteHeader">
@@ -15,7 +18,9 @@
       <div class="nav">
         <div class="navInner">
           <a class="brand" href="index.html#nav" aria-label="GLIRA home">
-            <div class="brandIcon" aria-hidden="true"><img src="assets/icons/glira.svg" alt=""></div>
+            <div class="brandIcon" aria-hidden="true">
+              <img src="assets/icons/glira.svg" alt="">
+            </div>
             <div class="brandText">
               <div class="brandName">GLIRA</div>
               <div class="brandFull">GLOBAL LEARNING AND INNOVATIVE RESEARCH ALLIANCE</div>
@@ -42,53 +47,41 @@
   </div>
 </header>
 
-<div class="rail" aria-label="Quick panels"><a href="index.html#p1" aria-label="Panel 1"><img src="assets/icons/p1.svg" alt=""></a><a href="index.html#p2" aria-label="Panel 2"><img src="assets/icons/p2.svg" alt=""></a><a href="index.html#p3" aria-label="Panel 3"><img src="assets/icons/p3.svg" alt=""></a><a href="index.html#p4" aria-label="Panel 4"><img src="assets/icons/p4.svg" alt=""></a><a href="index.html#p5" aria-label="Panel 5"><img src="assets/icons/p5.svg" alt=""></a><a href="index.html#p6" aria-label="Panel 6"><img src="assets/icons/p6.svg" alt=""></a><a href="index.html#p7" aria-label="Panel 7"><img src="assets/icons/p7.svg" alt=""></a><a href="index.html#p8" aria-label="Panel 8"><img src="assets/icons/p8.svg" alt=""></a><a href="index.html#p9" aria-label="Panel 9"><img src="assets/icons/p9.svg" alt=""></a></div>
+<!-- Floating navigation (right side) -->
+<nav class="floatNav" aria-label="Quick navigation">
+  <a class="floatNavItem" href="index.html#nav">About</a>
+  <a class="floatNavItem" href="svocf.html#nav">SVOCF</a>
+  <a class="floatNavItem" href="study-tour.html#nav">Study Tour</a>
+  <a class="floatNavItem" href="membership.html#nav">Membership</a>
+  <a class="floatNavItem" href="partnership.html#nav">Partnership</a>
+  <a class="floatNavItem" href="transparency.html#nav">Transparency</a>
+  <a class="floatNavItem" href="contact.html#nav">Contact</a>
+</nav>
+
 <section class="hero">
-<div class="heroMedia" aria-hidden="true">
-  <video class="heroVideo" autoplay muted loop playsinline preload="auto">
-    <source src="assets/media/hero_placeholder.mp4" type="video/mp4" />
-  </video>
-</div>
+  <div class="heroMedia" aria-hidden="true">
+    <video class="heroVideo" autoplay muted loop playsinline preload="auto">
+      <source src="assets/media/hero_placeholder.mp4?v=20260221" type="video/mp4" />
+    </video>
+  </div>
+
   <div class="heroOverlay" aria-hidden="true"></div>
-  <div class="heroTop">
-    <div class="gliraWord">GLIRA</div>
-    <button class="eyeBtn" id="eyeBtn" aria-label="At a glance">
-      <img src="assets/icons/eye.svg" alt="">
-    </button>
+
+  <!-- PC: one line at left-bottom -->
+  <div class="heroOrgName heroOrgName--pc" aria-hidden="true">
+    Global Learning and Innovative Research Alliance
+  </div>
+
+  <!-- Mobile: multi-line at left, start top=100px, left=30px -->
+  <div class="heroOrgName heroOrgName--mobile" aria-hidden="true">
+    <span>Global</span>
+    <span>Learning</span>
+    <span>And</span>
+    <span>Innovative</span>
+    <span>Research</span>
+    <span>Alliance</span>
   </div>
 </section>
-
-<div class="glance" id="glance" aria-hidden="true">
-  <div class="panel" role="dialog" aria-modal="true" aria-label="At a glance">
-    <div class="glanceTop">
-      <div>
-        <div class="badge">At a glance</div>
-        <div class="small" style="margin-top:8px; color: rgba(255,255,255,.70)">
-          Quick entry points to the four pathways.
-        </div>
-      </div>
-      <button class="xbtn" id="glanceClose" aria-label="Close"></button>
-    </div>
-    <div class="glanceGrid">
-      <a class="glanceItem" href="svocf.html#overview">
-        <div><div class="glanceTitle">SVOCF</div><div class="glanceHint">Certification framework overview</div></div>
-        <div class="badge">Open</div>
-      </a>
-      <a class="glanceItem" href="study-tour.html#overview">
-        <div><div class="glanceTitle">STUDY TOUR</div><div class="glanceHint">Programme accreditation overview</div></div>
-        <div class="badge">Open</div>
-      </a>
-      <a class="glanceItem" href="membership.html#overview">
-        <div><div class="glanceTitle">MEMBERSHIP</div><div class="glanceHint">Participation & benefits overview</div></div>
-        <div class="badge">Open</div>
-      </a>
-      <a class="glanceItem" href="partnership.html#overview">
-        <div><div class="glanceTitle">PARTNERSHIP</div><div class="glanceHint">Partner & node overview</div></div>
-        <div class="badge">Open</div>
-      </a>
-    </div>
-  </div>
-</div>
 
 <main>
 
@@ -102,21 +95,31 @@
         Two pathways anchor the ecosystem: <strong>SVOCF</strong> (personal competency certification) and <strong>Study Tour</strong> (programme accreditation).
       </p>
     </div>
+
     <div class="hr"></div>
+
     <div class="grid3">
       <div class="card pad">
         <div class="badge">SVOCF</div>
-        <p class="small" style="margin-top:10px">Three tracks (General / Professional / Youth) and progressive levels supported by an evidence spine.</p>
+        <p class="small" style="margin-top:10px">
+          Three tracks (General / Professional / Youth) and progressive levels supported by an evidence spine.
+        </p>
         <a class="btn primary" href="svocf.html#overview">Open SVOCF</a>
       </div>
+
       <div class="card pad">
         <div class="badge">Study Tour</div>
-        <p class="small" style="margin-top:10px">Accreditation for study tours and applied learning programmes with safeguarding-first QA.</p>
+        <p class="small" style="margin-top:10px">
+          Accreditation for study tours and applied learning programmes with safeguarding-first QA.
+        </p>
         <a class="btn" href="study-tour.html#overview">Open Study Tour</a>
       </div>
+
       <div class="card pad">
         <div class="badge">Partners & Nodes</div>
-        <p class="small" style="margin-top:10px">Open collaboration. Local nodes expand outreach (liaison) and delivery (working).</p>
+        <p class="small" style="margin-top:10px">
+          Open collaboration. Local nodes expand outreach (liaison) and delivery (working).
+        </p>
         <a class="btn" href="partnership.html#overview">Open Partnership</a>
       </div>
     </div>
@@ -130,107 +133,124 @@
       Turning future commitments into verifiable phases: standards orientation → pilots → QA loop → recognition mapping → digital coordination.
     </p>
     <div class="grid3">
-      <div class="card pad"><div class="badge">Phase 1</div><div class="small" style="margin-top:10px">Public standards package, partner onboarding, initial pilots.</div></div>
-      <div class="card pad"><div class="badge">Phase 2</div><div class="small" style="margin-top:10px">Evidence tooling, sampling rules, QA/audit cycle, listed partners.</div></div>
-      <div class="card pad"><div class="badge">Phase 3</div><div class="small" style="margin-top:10px">Digital member space (planned): portfolios, coordination, activity initiation.</div></div>
+      <div class="card pad">
+        <div class="badge">Phase 1</div>
+        <div class="small" style="margin-top:10px">Public standards package, partner onboarding, initial pilots.</div>
+      </div>
+
+      <div class="card pad">
+        <div class="badge">Phase 2</div>
+        <div class="small" style="margin-top:10px">Evidence tooling, sampling rules, QA/audit cycle, listed partners.</div>
+      </div>
+
+      <div class="card pad">
+        <div class="badge">Phase 3</div>
+        <div class="small" style="margin-top:10px">Digital member space (planned): portfolios, coordination, activity initiation.</div>
+      </div>
     </div>
   </div>
 </section>
 
 <section class="posterZone" id="panels">
   <div class="posterWrap">
-    <div class="posterBg" aria-hidden="true"><img src="assets/media/svocf_hero.jpg" alt=""></div>
+    <div class="posterBg" aria-hidden="true">
+      <img src="assets/media/svocf_hero.jpg" alt="">
+    </div>
+
     <div class="stripStack">
-<div class="strip" id="p1">
-  <div class="stripInner">
-    <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-    <div class="stripText">
-      <div class="tTitle">GLIRA — Panel 1</div>
-      <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-    </div>
-  </div>
-</div>
+      <div class="strip" id="p1">
+        <div class="stripInner">
+          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
+          <div class="stripText">
+            <div class="tTitle">GLIRA — Panel 1</div>
+            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
+          </div>
+        </div>
+      </div>
 
-<div class="strip" id="p2">
-  <div class="stripInner">
-    <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-    <div class="stripText">
-      <div class="tTitle">GLIRA — Panel 2</div>
-      <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-    </div>
-  </div>
-</div>
+      <div class="strip" id="p2">
+        <div class="stripInner">
+          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
+          <div class="stripText">
+            <div class="tTitle">GLIRA — Panel 2</div>
+            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
+          </div>
+        </div>
+      </div>
 
-<div class="strip" id="p3">
-  <div class="stripInner">
-    <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-    <div class="stripText">
-      <div class="tTitle">GLIRA — Panel 3</div>
-      <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-    </div>
-  </div>
-</div>
+      <div class="strip" id="p3">
+        <div class="stripInner">
+          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
+          <div class="stripText">
+            <div class="tTitle">GLIRA — Panel 3</div>
+            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
+          </div>
+        </div>
+      </div>
 
-<div class="strip" id="p4">
-  <div class="stripInner">
-    <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-    <div class="stripText">
-      <div class="tTitle">GLIRA — Panel 4</div>
-      <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-    </div>
-  </div>
-</div>
+      <div class="strip" id="p4">
+        <div class="stripInner">
+          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
+          <div class="stripText">
+            <div class="tTitle">GLIRA — Panel 4</div>
+            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
+          </div>
+        </div>
+      </div>
 
-<div class="strip" id="p5">
-  <div class="stripInner">
-    <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-    <div class="stripText">
-      <div class="tTitle">GLIRA — Panel 5</div>
-      <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-    </div>
-  </div>
-</div>
+      <div class="strip" id="p5">
+        <div class="stripInner">
+          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
+          <div class="stripText">
+            <div class="tTitle">GLIRA — Panel 5</div>
+            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
+          </div>
+        </div>
+      </div>
 
-<div class="strip" id="p6">
-  <div class="stripInner">
-    <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-    <div class="stripText">
-      <div class="tTitle">GLIRA — Panel 6</div>
-      <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-    </div>
-  </div>
-</div>
+      <div class="strip" id="p6">
+        <div class="stripInner">
+          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
+          <div class="stripText">
+            <div class="tTitle">GLIRA — Panel 6</div>
+            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
+          </div>
+        </div>
+      </div>
 
-<div class="strip" id="p7">
-  <div class="stripInner">
-    <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-    <div class="stripText">
-      <div class="tTitle">GLIRA — Panel 7</div>
-      <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-    </div>
-  </div>
-</div>
+      <div class="strip" id="p7">
+        <div class="stripInner">
+          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
+          <div class="stripText">
+            <div class="tTitle">GLIRA — Panel 7</div>
+            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
+          </div>
+        </div>
+      </div>
 
-<div class="strip" id="p8">
-  <div class="stripInner">
-    <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-    <div class="stripText">
-      <div class="tTitle">GLIRA — Panel 8</div>
-      <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-    </div>
-  </div>
-</div>
+      <div class="strip" id="p8">
+        <div class="stripInner">
+          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
+          <div class="stripText">
+            <div class="tTitle">GLIRA — Panel 8</div>
+            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
+          </div>
+        </div>
+      </div>
 
-<div class="strip" id="p9">
-  <div class="stripInner">
-    <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-    <div class="stripText">
-      <div class="tTitle">GLIRA — Panel 9</div>
-      <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
+      <div class="strip" id="p9">
+        <div class="stripInner">
+          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
+          <div class="stripText">
+            <div class="tTitle">GLIRA — Panel 9</div>
+            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-</div></div>
-  </div>
+
+  <!-- keep your original scroll spacer -->
   <div style="height: 220vh"></div>
 </section>
 
@@ -238,9 +258,18 @@
   <div class="container">
     <h2 class="h2">What GLIRA delivers</h2>
     <div class="grid3">
-      <div class="card pad"><div class="badge">Standards governance</div><div class="small" style="margin-top:10px">Clear scope, ethics, safeguarding, and versioned standards.</div></div>
-      <div class="card pad"><div class="badge">Evidence spine</div><div class="small" style="margin-top:10px">Portfolio standards, rubric integrity, sampling rules, and verification logic.</div></div>
-      <div class="card pad"><div class="badge">Quality assurance</div><div class="small" style="margin-top:10px">Audit protocol, complaints/appeals handling, and continuous improvement.</div></div>
+      <div class="card pad">
+        <div class="badge">Standards governance</div>
+        <div class="small" style="margin-top:10px">Clear scope, ethics, safeguarding, and versioned standards.</div>
+      </div>
+      <div class="card pad">
+        <div class="badge">Evidence spine</div>
+        <div class="small" style="margin-top:10px">Portfolio standards, rubric integrity, sampling rules, and verification logic.</div>
+      </div>
+      <div class="card pad">
+        <div class="badge">Quality assurance</div>
+        <div class="small" style="margin-top:10px">Audit protocol, complaints/appeals handling, and continuous improvement.</div>
+      </div>
     </div>
   </div>
 </section>
@@ -259,6 +288,7 @@
           Contact: <a href="mailto:contact@glira.cc">contact@glira.cc</a>
         </div>
       </div>
+
       <div>
         <div class="small" style="color: rgba(255,255,255,.55)"><strong>Quick links</strong></div>
         <div class="small" style="margin-top:8px; display:flex; flex-wrap:wrap; gap:10px; color: rgba(255,255,255,.55)">
@@ -276,7 +306,13 @@
     </div>
   </div>
 </footer>
-<script>document.getElementById("y").textContent = new Date().getFullYear();</script>
 
-<script src="assets/js/app.js"></script>
-</body></html>
+<script>
+  document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+
+<!-- Keep existing app.js (add version to reduce caching) -->
+<script src="assets/js/app.js?v=20260221"></script>
+
+</body>
+</html>
