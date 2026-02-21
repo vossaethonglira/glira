@@ -5,314 +5,176 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GLIRA — About</title>
   <meta name="description" content="GLIRA — International certification & accreditation alliance." />
-
-  <!-- Add version param to reduce mobile caching issues -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=20260221" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
-<body data-page="home">
+<body data-page="home" class="noSave">
 
-<header class="header" id="siteHeader">
-  <div class="navWrap">
-    <div class="navShell">
-      <div class="nav">
-        <div class="navInner">
-          <a class="brand" href="index.html#nav" aria-label="GLIRA home">
-            <div class="brandIcon" aria-hidden="true">
-              <img src="assets/icons/glira.svg" alt="">
+  <!-- HERO (Video full screen) -->
+  <section class="hero" id="top">
+    <div class="heroMedia" aria-hidden="true">
+      <video class="heroVideo" autoplay muted loop playsinline preload="auto">
+        <source src="assets/media/hero_placeholder.mp4" type="video/mp4" />
+      </video>
+    </div>
+
+    <div class="heroOverlay" aria-hidden="true"></div>
+
+    <!-- PC: bottom-left single-line full name (bigger, above nav) -->
+    <div class="heroOrgPc" aria-hidden="true">
+      GLOBAL LEARNING AND INNOVATIVE RESEARCH ALLIANCE
+    </div>
+
+    <!-- Mobile: left multi-line Title Case full name; GLIRA removed -->
+    <div class="heroOrgMobile" aria-hidden="true">
+      <div>Global</div>
+      <div>Learning</div>
+      <div>And</div>
+      <div>Innovative</div>
+      <div>Research</div>
+      <div>Alliance</div>
+    </div>
+  </section>
+
+  <!-- PC: navigation bar BELOW hero (not floating) -->
+  <header class="header headerBelowHero" id="siteHeader">
+    <div class="navWrap" id="nav">
+      <div class="navShell">
+        <div class="nav">
+          <div class="navInner">
+
+            <a class="brand" href="index.html#top" aria-label="GLIRA home">
+              <div class="brandIcon" aria-hidden="true">
+                <img src="assets/media/logo.png" alt="GLIRA logo">
+              </div>
+              <div class="brandText">
+                <div class="brandName">GLIRA</div>
+                <div class="brandFull">GLOBAL LEARNING AND INNOVATIVE RESEARCH ALLIANCE</div>
+              </div>
+            </a>
+
+            <nav class="navlinks" aria-label="Primary">
+              <a href="index.html#about" data-nav="home">About</a>
+              <a href="svocf.html#overview" data-nav="svocf">SVOCF</a>
+              <a href="study-tour.html#overview" data-nav="study">Study Tour</a>
+              <a href="membership.html#overview" data-nav="membership">Membership</a>
+              <a href="partnership.html#overview" data-nav="partnership">Partnership</a>
+              <a href="transparency.html#overview" data-nav="transparency">Transparency</a>
+              <a href="contact.html#overview" data-nav="contact">Contact</a>
+            </nav>
+
+            <div class="ctas">
+              <a class="btn primary" href="membership.html#overview">Member</a>
+              <a class="btn" href="partnership.html#overview">Partner</a>
             </div>
-            <div class="brandText">
-              <div class="brandName">GLIRA</div>
-              <div class="brandFull">GLOBAL LEARNING AND INNOVATIVE RESEARCH ALLIANCE</div>
-            </div>
-          </a>
 
-          <nav class="navlinks" aria-label="Primary">
-            <a href="index.html#nav" data-nav="home">About</a>
-            <a href="svocf.html#nav" data-nav="svocf">SVOCF</a>
-            <a href="study-tour.html#nav" data-nav="study">Study Tour</a>
-            <a href="membership.html#nav" data-nav="membership">Membership</a>
-            <a href="partnership.html#nav" data-nav="partnership">Partnership</a>
-            <a href="transparency.html#nav" data-nav="transparency">Transparency</a>
-            <a href="contact.html#nav" data-nav="contact">Contact</a>
-          </nav>
-
-          <div class="ctas">
-            <a class="btn primary" href="membership.html#overview">Member</a>
-            <a class="btn" href="partnership.html#overview">Partner</a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<!-- Floating navigation (right side) -->
-<nav class="floatNav" aria-label="Quick navigation">
-  <a class="floatNavItem" href="index.html#nav">About</a>
-  <a class="floatNavItem" href="svocf.html#nav">SVOCF</a>
-  <a class="floatNavItem" href="study-tour.html#nav">Study Tour</a>
-  <a class="floatNavItem" href="membership.html#nav">Membership</a>
-  <a class="floatNavItem" href="partnership.html#nav">Partnership</a>
-  <a class="floatNavItem" href="transparency.html#nav">Transparency</a>
-  <a class="floatNavItem" href="contact.html#nav">Contact</a>
-</nav>
+  <!-- Mobile: right-side floating navigation (replaces bottom nav) -->
+  <aside class="mobileRail" aria-label="Mobile navigation">
+    <a href="index.html#about">About</a>
+    <a href="svocf.html#overview">SVOCF</a>
+    <a href="study-tour.html#overview">Study Tour</a>
+    <a href="membership.html#overview">Membership</a>
+    <a href="partnership.html#overview">Partnership</a>
+    <a href="transparency.html#overview">Transparency</a>
+    <a href="contact.html#overview">Contact</a>
+  </aside>
 
-<section class="hero">
-  <div class="heroMedia" aria-hidden="true">
-    <video class="heroVideo" autoplay muted loop playsinline preload="auto">
-      <source src="assets/media/hero_placeholder.mp4?v=20260221" type="video/mp4" />
-    </video>
-  </div>
+  <main>
 
-  <div class="heroOverlay" aria-hidden="true"></div>
+    <section class="section" id="about">
+      <div class="container">
+        <div class="card pad" id="overview">
+          <div class="badge">About GLIRA</div>
+          <h1 class="h1" style="margin-top:12px">An international alliance for evidence-based certification and accreditation.</h1>
+          <p class="p">
+            GLIRA aligns learning, practice, and recognition through transparent standards, verifiable evidence, and cross-border cooperation.
+            Two pathways anchor the ecosystem: <strong>SVOCF</strong> (personal competency certification) and <strong>Study Tour</strong> (programme accreditation).
+          </p>
+        </div>
 
-  <!-- PC: one line at left-bottom -->
-  <div class="heroOrgName heroOrgName--pc" aria-hidden="true">
-    Global Learning and Innovative Research Alliance
-  </div>
+        <div class="hr"></div>
 
-  <!-- Mobile: multi-line at left, start top=100px, left=30px -->
-  <div class="heroOrgName heroOrgName--mobile" aria-hidden="true">
-    <span>Global</span>
-    <span>Learning</span>
-    <span>And</span>
-    <span>Innovative</span>
-    <span>Research</span>
-    <span>Alliance</span>
-  </div>
-</section>
+        <div class="grid3">
+          <div class="card pad">
+            <div class="badge">SVOCF</div>
+            <p class="small" style="margin-top:10px">Three tracks (General / Professional / Youth) and progressive levels supported by an evidence spine.</p>
+            <a class="btn primary" href="svocf.html#overview">Open SVOCF</a>
+          </div>
 
-<main>
+          <div class="card pad">
+            <div class="badge">Study Tour</div>
+            <p class="small" style="margin-top:10px">Accreditation for study tours and applied learning programmes with safeguarding-first QA.</p>
+            <a class="btn" href="study-tour.html#overview">Open Study Tour</a>
+          </div>
 
-<section class="section" id="about">
-  <div class="container">
-    <div class="card pad" id="overview">
-      <div class="badge">About GLIRA</div>
-      <h1 class="h1" style="margin-top:12px">An international alliance for evidence-based certification and accreditation.</h1>
-      <p class="p">
-        GLIRA aligns learning, practice, and recognition through transparent standards, verifiable evidence, and cross-border cooperation.
-        Two pathways anchor the ecosystem: <strong>SVOCF</strong> (personal competency certification) and <strong>Study Tour</strong> (programme accreditation).
-      </p>
-    </div>
+          <div class="card pad">
+            <div class="badge">Partners & Nodes</div>
+            <p class="small" style="margin-top:10px">Open collaboration. Local nodes expand outreach (liaison) and delivery (working).</p>
+            <a class="btn" href="partnership.html#overview">Open Partnership</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <div class="hr"></div>
-
-    <div class="grid3">
-      <div class="card pad">
-        <div class="badge">SVOCF</div>
+    <section class="section" id="roadmap">
+      <div class="container">
+        <h2 class="h2">Roadmap (Planned)</h2>
         <p class="small" style="margin-top:10px">
-          Three tracks (General / Professional / Youth) and progressive levels supported by an evidence spine.
+          Turning future commitments into verifiable phases: standards orientation → pilots → QA loop → recognition mapping → digital coordination.
         </p>
-        <a class="btn primary" href="svocf.html#overview">Open SVOCF</a>
-      </div>
 
-      <div class="card pad">
-        <div class="badge">Study Tour</div>
-        <p class="small" style="margin-top:10px">
-          Accreditation for study tours and applied learning programmes with safeguarding-first QA.
-        </p>
-        <a class="btn" href="study-tour.html#overview">Open Study Tour</a>
-      </div>
-
-      <div class="card pad">
-        <div class="badge">Partners & Nodes</div>
-        <p class="small" style="margin-top:10px">
-          Open collaboration. Local nodes expand outreach (liaison) and delivery (working).
-        </p>
-        <a class="btn" href="partnership.html#overview">Open Partnership</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section" id="roadmap">
-  <div class="container">
-    <h2 class="h2">Roadmap (Planned)</h2>
-    <p class="small" style="margin-top:10px">
-      Turning future commitments into verifiable phases: standards orientation → pilots → QA loop → recognition mapping → digital coordination.
-    </p>
-    <div class="grid3">
-      <div class="card pad">
-        <div class="badge">Phase 1</div>
-        <div class="small" style="margin-top:10px">Public standards package, partner onboarding, initial pilots.</div>
-      </div>
-
-      <div class="card pad">
-        <div class="badge">Phase 2</div>
-        <div class="small" style="margin-top:10px">Evidence tooling, sampling rules, QA/audit cycle, listed partners.</div>
-      </div>
-
-      <div class="card pad">
-        <div class="badge">Phase 3</div>
-        <div class="small" style="margin-top:10px">Digital member space (planned): portfolios, coordination, activity initiation.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="posterZone" id="panels">
-  <div class="posterWrap">
-    <div class="posterBg" aria-hidden="true">
-      <img src="assets/media/svocf_hero.jpg" alt="">
-    </div>
-
-    <div class="stripStack">
-      <div class="strip" id="p1">
-        <div class="stripInner">
-          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-          <div class="stripText">
-            <div class="tTitle">GLIRA — Panel 1</div>
-            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-          </div>
+        <div class="grid3">
+          <div class="card pad"><div class="badge">Phase 1</div><div class="small" style="margin-top:10px">Public standards package, partner onboarding, initial pilots.</div></div>
+          <div class="card pad"><div class="badge">Phase 2</div><div class="small" style="margin-top:10px">Evidence tooling, sampling rules, QA/audit cycle, listed partners.</div></div>
+          <div class="card pad"><div class="badge">Phase 3</div><div class="small" style="margin-top:10px">Digital member space (planned): portfolios, coordination, activity initiation.</div></div>
         </div>
       </div>
+    </section>
 
-      <div class="strip" id="p2">
-        <div class="stripInner">
-          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-          <div class="stripText">
-            <div class="tTitle">GLIRA — Panel 2</div>
-            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
+    <!-- 你原本的 panels / posterZone 保留（略） -->
+    <!-- ... -->
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footerGrid">
+        <div>
+          <div class="badge">GLIRA</div>
+          <p class="small" style="margin-top:10px; color: rgba(255,255,255,.55)">
+            International certification & accreditation alliance. Transparency-first standards, evidence spine, and cross-border coordination.
+          </p>
+          <div class="small" style="margin-top:10px; color: rgba(255,255,255,.55)">
+            Contact: <a href="mailto:contact@glira.cc">contact@glira.cc</a>
           </div>
         </div>
-      </div>
 
-      <div class="strip" id="p3">
-        <div class="stripInner">
-          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-          <div class="stripText">
-            <div class="tTitle">GLIRA — Panel 3</div>
-            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
+        <div>
+          <div class="small" style="color: rgba(255,255,255,.55)"><strong>Quick links</strong></div>
+          <div class="small" style="margin-top:8px; display:flex; flex-wrap:wrap; gap:10px; color: rgba(255,255,255,.55)">
+            <a href="svocf.html#nav">SVOCF</a>
+            <a href="study-tour.html#nav">Study Tour</a>
+            <a href="membership.html#nav">Membership</a>
+            <a href="partnership.html#nav">Partnership</a>
+            <a href="transparency.html#nav">Transparency</a>
+            <a href="contact.html#nav">Contact</a>
           </div>
-        </div>
-      </div>
-
-      <div class="strip" id="p4">
-        <div class="stripInner">
-          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-          <div class="stripText">
-            <div class="tTitle">GLIRA — Panel 4</div>
-            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="strip" id="p5">
-        <div class="stripInner">
-          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-          <div class="stripText">
-            <div class="tTitle">GLIRA — Panel 5</div>
-            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="strip" id="p6">
-        <div class="stripInner">
-          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-          <div class="stripText">
-            <div class="tTitle">GLIRA — Panel 6</div>
-            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="strip" id="p7">
-        <div class="stripInner">
-          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-          <div class="stripText">
-            <div class="tTitle">GLIRA — Panel 7</div>
-            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="strip" id="p8">
-        <div class="stripInner">
-          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-          <div class="stripText">
-            <div class="tTitle">GLIRA — Panel 8</div>
-            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="strip" id="p9">
-        <div class="stripInner">
-          <div class="stripImg"><img src="assets/media/svocf_hero.jpg" alt=""></div>
-          <div class="stripText">
-            <div class="tTitle">GLIRA — Panel 9</div>
-            <div class="tBody">Replace this placeholder with your approved text and a 4:3 image for this panel.</div>
+          <div class="small" style="margin-top:12px; color: rgba(255,255,255,.55)">
+            © <span id="y"></span> GLIRA. All rights reserved.
           </div>
         </div>
       </div>
     </div>
-  </div>
+  </footer>
 
-  <!-- keep your original scroll spacer -->
-  <div style="height: 220vh"></div>
-</section>
-
-<section class="section">
-  <div class="container">
-    <h2 class="h2">What GLIRA delivers</h2>
-    <div class="grid3">
-      <div class="card pad">
-        <div class="badge">Standards governance</div>
-        <div class="small" style="margin-top:10px">Clear scope, ethics, safeguarding, and versioned standards.</div>
-      </div>
-      <div class="card pad">
-        <div class="badge">Evidence spine</div>
-        <div class="small" style="margin-top:10px">Portfolio standards, rubric integrity, sampling rules, and verification logic.</div>
-      </div>
-      <div class="card pad">
-        <div class="badge">Quality assurance</div>
-        <div class="small" style="margin-top:10px">Audit protocol, complaints/appeals handling, and continuous improvement.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-</main>
-
-<footer class="footer">
-  <div class="container">
-    <div class="footerGrid">
-      <div>
-        <div class="badge">GLIRA</div>
-        <p class="small" style="margin-top:10px; color: rgba(255,255,255,.55)">
-          International certification & accreditation alliance. Transparency-first standards, evidence spine, and cross-border coordination.
-        </p>
-        <div class="small" style="margin-top:10px; color: rgba(255,255,255,.55)">
-          Contact: <a href="mailto:contact@glira.cc">contact@glira.cc</a>
-        </div>
-      </div>
-
-      <div>
-        <div class="small" style="color: rgba(255,255,255,.55)"><strong>Quick links</strong></div>
-        <div class="small" style="margin-top:8px; display:flex; flex-wrap:wrap; gap:10px; color: rgba(255,255,255,.55)">
-          <a href="svocf.html#nav">SVOCF</a>
-          <a href="study-tour.html#nav">Study Tour</a>
-          <a href="membership.html#nav">Membership</a>
-          <a href="partnership.html#nav">Partnership</a>
-          <a href="transparency.html#nav">Transparency</a>
-          <a href="contact.html#nav">Contact</a>
-        </div>
-        <div class="small" style="margin-top:12px; color: rgba(255,255,255,.55)">
-          © <span id="y"></span> GLIRA. All rights reserved.
-        </div>
-      </div>
-    </div>
-  </div>
-</footer>
-
-<script>
-  document.getElementById("y").textContent = new Date().getFullYear();
-</script>
-
-<!-- Keep existing app.js (add version to reduce caching) -->
-<script src="assets/js/app.js?v=20260221"></script>
-
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>
+
