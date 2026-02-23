@@ -430,3 +430,27 @@ a{ color:inherit; text-decoration:none; }
 @media (max-width: 860px){
   .dropMenu{display:none !important}
 }
+/* FORCE horizontal strip row (no vertical stack) */
+.stripStack{
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 14px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  padding: 18px 18px 26px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.strip{
+  flex: 0 0 auto;
+  width: min(360px, 82vw);   /* PC一栏约360px，手机约82vw */
+  scroll-snap-align: start;
+}
+
+/* Optional: hide scrollbar (keep scroll) */
+.stripStack::-webkit-scrollbar{ height: 8px; }
+.stripStack::-webkit-scrollbar-thumb{ background: rgba(255,255,255,.12); border-radius: 10px; }
+@media (max-width: 1200px){
+  .stripStack{ flex-direction: row !important; }
+}
