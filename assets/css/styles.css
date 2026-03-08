@@ -248,3 +248,15 @@ img{max-width:100%;display:block}
   .navInner{gap:8px}
   .navLink{padding:7px 9px}
 }
+/* ===== DEBUG: force images visible ===== */
+img{
+  display:block !important;
+  visibility:visible !important;
+  opacity:1 !important;
+  max-width:100% !important;
+  height:auto !important;
+  outline: 2px solid rgba(255,60,60,.55) !important;
+}
+.barImg, .tile img, .heroImg{
+  outline: 2px solid rgba(60,255,60,.35) !important;
+}
