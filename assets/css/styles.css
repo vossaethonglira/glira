@@ -9,7 +9,19 @@
   --shadow:0 18px 40px rgba(0,0,0,.45);
   --radius:18px;
   --max:1100px;
+
+  /* ===== FLOURISH (Bars) sizing control =====
+     Set this to the SAME height as your three tall tiles (the SLVS 3 vertical cards).
+     Example: if those tiles are 540px tall, keep 540px here.
+  */
+  --tileTallH:540px;
+
+  /* Bars image sizing: 2/3 of tall tile height */
+  --barImgH:calc(var(--tileTallH) * .6667);
+  /* Width derived from height: adjust 1.35 -> 1.2~1.6 depending on your visual preference */
+  --barImgW:calc(var(--barImgH) * 1.35);
 }
+
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
@@ -104,102 +116,76 @@ img{max-width:100%;display:block}
 .roadGrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
 .road{cursor:pointer}
 
-/* ===== OVERRIDE: Bars become big-image + body-below layout ===== */
-/* This overrides the earlier .bar rules. Place at END of styles.css */
+/* ===== Bars (FLOURISH 9 rows) — BIG IMAGE, BODY BELOW, FULL IMAGE SHOWN ===== */
+.barList{display:flex;flex-direction:column;gap:16px}
 
-/* 1) 基准：把竖卡高度写成变量，图片高度 = 2/3 * 竖卡高度 */
-:root{
-  --tileTallH: 540px; /* 这里改成你首页三张竖图的实际高度 */
-  --barImgH: calc(var(--tileTallH) * .6667); /* 2/3 */
-  --barImgW: calc(var(--barImgH) * 1.35);   /* 宽度按比例推（视觉接近4:3） */
-}
-
-/* list spacing */
-.barList{gap:16px}
-
-/* 2) bar：改成两行结构：第一行（大图+标题区），第二行（内容区） */
+/* Main row: big image + main text, then the drop spans full width below */
 .bar{
   display:grid;
-  grid-template-columns: var(--barImgW) 1fr; /* 左大图 + 右标题区 */
-  grid-template-rows: auto auto;            /* 第二行给 drop 内容 */
+  grid-template-columns: var(--barImgW) 1fr;
+  grid-template-rows: auto auto;
   gap: 18px;
   align-items:start;
-  padding: 14px;
-}
 
-/* 3) 左图：固定高度=2/3竖图；图片全图呈现，不裁切 */
+  border-radius:22px;
+  overflow:hidden;
+  border:1px solid var(--line);
+  background:rgba(255,255,255,.03);
+  box-shadow:var(--shadow);
+  cursor:pointer;
+
+  padding:14px;
+  transition:transform .15s ease, border-color .15s ease, background .15s ease;
+}
+.bar:hover{transform:translateY(-2px);border-color:rgba(255,255,255,.20);background:rgba(255,255,255,.05)}
+.bar:focus{outline:2px solid rgba(27,173,196,.55);outline-offset:2px}
+
+/* Left image box */
 .barImg{
   width: var(--barImgW);
   height: var(--barImgH);
-  border-radius: 18px;
+  border-radius:18px;
   overflow:hidden;
   border:1px solid rgba(255,255,255,.14);
   background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(0,0,0,.25));
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 .barImg img{
   width:100%;
   height:100%;
-  object-fit: contain;      /* ✅ 全图呈现 */
-  object-position: center;
-  aspect-ratio: auto;       /* 覆盖原来的4/3约束 */
+  object-fit: contain;      /* ✅ show full image, no crop */
+  object-position:center;
   display:block;
 }
 
-/* 4) 右侧标题区：取消相对定位（否则会影响 drop） */
-.barMain{
-  padding: 6px 0 0;
-  position: static;         /* ✅ 不再作为绝对定位参考 */
-}
+/* Right main text */
+.barMain{padding:6px 0 0; position:static}
+.barTitle{font-size:18px;font-weight:900;letter-spacing:.02em}
+.barHint{margin-top:6px;font-size:14px;color:var(--muted)}
+.barTeaser{margin-top:6px;font-size:14px;color:rgba(234,241,255,.90)}
+.ellipsis{opacity:.8}
 
-/* 5) drop 内容：改为自然流（不再 absolute），并放在第二行 */
+/* Drop content goes to the next row, below the big image naturally */
 .barDrop{
-  position: static;         /* ✅ 下移：跟随文档流 */
-  left:auto; right:auto; top:auto;
-  grid-column: 1 / -1;      /* ✅ 占满整行（图下方+右侧一起） */
-  max-height: none;
-  overflow: visible;
-  opacity: 1;
-  transform: none;
-  margin-top: 6px;
-  display: none;            /* 默认隐藏，hover/pin时显示 */
+  grid-column: 1 / -1;
+  position:static;
+  margin-top: 8px;
+  display:none;
 }
-
-/* hover/pin 展示内容（不再用max-height动画，避免卡顿） */
 .bar:hover .barDrop{display:block}
 .bar.isPinned .barDrop{display:block}
 
-/* drop inner */
 .barDropInner{
-  margin-top: 0;
-  border-radius: 16px;
+  border-radius:16px;
   border:1px solid rgba(255,255,255,.14);
-  background: rgba(10,18,28,.92);
-  padding: 14px 14px;
+  background:rgba(10,18,28,.92);
+  padding:14px 14px;
 }
+.barDropTitle{font-weight:900;font-size:14px}
+.barDropText{margin-top:8px;font-size:14px;line-height:1.7;color:rgba(234,241,255,.92)}
 
-/* Typography微调：标题更大一点，符合你“更沉浸” */
-.barTitle{font-size:18px;font-weight:900;letter-spacing:.02em}
-.barHint,.barTeaser,.barDropText{font-size:14px;line-height:1.7}
-
-/* 6) Mobile：改为上下排列，避免右侧太窄 */
-@media (max-width: 980px){
-  :root{
-    --tileTallH: 60vh;
-    --barImgH: calc(var(--tileTallH) * .6667);
-    --barImgW: 100%;
-  }
-  .bar{
-    grid-template-columns: 1fr;
-    grid-template-rows: auto auto auto;
-  }
-  .barImg{
-    width: 100%;
-    height: var(--barImgH);
-  }
-  .barDrop{
-    grid-column: 1 / -1;
-  }
-}
 /* Document list */
 .docList{display:flex;flex-direction:column;gap:10px}
 .docRow{
@@ -241,16 +227,24 @@ img{max-width:100%;display:block}
 @media (max-width:980px){
   .heroTitle{font-size:38px}
   .tileGrid,.roadGrid{grid-template-columns:1fr;gap:12px}
-  .bar{grid-template-columns:120px 1fr}
+
+  /* Bars: stack layout on mobile, still show full image */
+  :root{
+    --tileTallH: 60vh;
+    --barImgH: calc(var(--tileTallH) * .6667);
+    --barImgW: 100%;
+  }
+  .bar{grid-template-columns:1fr;grid-template-rows:auto auto auto}
+  .barImg{width:100%;height:var(--barImgH)}
+  /* hover may not work on mobile; rely on .isPinned if you have JS toggle */
+  .bar:hover .barDrop{display:none}
+  .bar.isPinned .barDrop{display:block}
 }
+
 @media (max-width:520px){
   .hero{min-height:72vh}
   .heroInner{padding:28px 0 26px}
   .heroTitle{font-size:32px}
   .navInner{gap:8px}
   .navLink{padding:7px 9px}
-  .bar{grid-template-columns:1fr}
-  .barDrop{position:relative;left:auto;right:auto;top:auto}
-  .bar:hover .barDrop{max-height:0;opacity:0;transform:translateY(-6px)}
-  .bar.isPinned .barDrop{max-height:1200px;opacity:1;transform:none}
 }
