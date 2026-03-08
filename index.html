@@ -109,142 +109,324 @@
   </div>
 </section>
 
-<section class="section" id="pillars">
+<section class="section" id="principles">
   <div class="container">
     <div class="card pad">
-      <div class="badge">Vision & Principles</div>
+      <div class="badge">VISION & PRINCIPLES</div>
       <h2 class="h2" style="margin-top:14px">Learning into Life, Value into Action</h2>
-    
+      <p class="p" style="margin-top:10px">
+        FLOURISH is an integrated reading frame—each letter names a core capability lens for future-ready growth.
+      </p>
+
       <div class="hr"></div>
 
-      <div class="barList">
+      <!-- ✅ Index-only styles: make images 4x and push the content box BELOW the image row -->
+      <style>
+        /* container */
+        .flList{ display:flex; flex-direction:column; gap:14px; margin-top:14px; }
 
-      <article class="bar" data-bar="flourish" tabindex="0" role="button" aria-expanded="false">
-        <div class="barImg" aria-hidden="true"><img src="assets/media/bar_flourish.jpg" alt=""></div>
-        <div class="barMain">
-          <div class="barTitle">FLOURISH</div>
-          <div class="barHint">...</div>
-          <div class="barDrop" role="region" aria-label="FLOURISH details">
-            <div class="barDropInner">
-              <div class="barDropTitle">FLOURISH</div>
-              <div class="barDropText">FLOURISH frames future-oriented sustainable life competences as a regenerating system, supported by verifiable evidence and transparent standards. Futureproof sets the shock-handling baseline. Life learning drives continual upgrade. Omnibound enables cross-cultural application with boundary respect. Unity of systems connects domains into reinforcing loops. Regeneration upgrades the system after imbalance. Integrity protects trust through person–process–purpose alignment. Sustainability keeps decisions and evaluation repeatable over time. Holistic wellbeing provides the outcome lens across five domains. The result is an audit-ready growth logic designed for uncertainty and long-term credibility.</div>
+        /* each item becomes: [top row (big image + title)] then [body box below] */
+        .flItem{
+          border: 1px solid rgba(255,255,255,.10);
+          border-radius: 18px;
+          background: rgba(255,255,255,.04);
+          overflow: hidden;
+        }
+
+        .flTop{
+          display:flex;
+          gap:16px;
+          padding: 14px;
+          align-items: flex-start;
+        }
+
+        /* ✅ 4x image sizing (adjust if you want bigger/smaller) */
+        .flImg{
+          width: 420px;     /* <- “约4倍”级别：从 105px 左右放大到 420px */
+          height: 280px;    /* 比例可改：例如 300/320 */
+          border-radius: 16px;
+          overflow:hidden;
+          flex: 0 0 auto;
+          border: 1px solid rgba(255,255,255,.12);
+          background: rgba(0,0,0,.20);
+        }
+        .flImg img{ width:100%; height:100%; object-fit: cover; display:block; }
+
+        /* right header area */
+        .flHead{ flex: 1 1 auto; min-width: 0; padding-top: 6px; }
+        .flTitle{
+          font-weight: 850;
+          letter-spacing: .04em;
+          font-size: 20px;
+          line-height: 1.25;
+          color: rgba(255,255,255,.92);
+        }
+        .flHint{
+          margin-top: 10px;
+          color: rgba(255,255,255,.62);
+          font-size: 14px;
+          line-height: 1.6;
+        }
+
+        /* toggle button */
+        .flToggle{
+          margin-top: 12px;
+          display:inline-flex;
+          align-items:center;
+          gap:10px;
+          padding: 10px 14px;
+          border-radius: 999px;
+          border: 1px solid rgba(255,255,255,.12);
+          background: rgba(255,255,255,.05);
+          color: rgba(255,255,255,.82);
+          cursor:pointer;
+          user-select:none;
+        }
+        .flToggle:hover{ background: rgba(255,255,255,.08); }
+
+        /* ✅ body box is AFTER the top row: it will be pushed down by the big image naturally */
+        .flBody{
+          display:none;
+          border-top: 1px solid rgba(255,255,255,.10);
+          background: rgba(0,0,0,.22);
+          padding: 16px 18px 18px;
+        }
+        .flBody p{ margin: 0 0 10px; color: rgba(255,255,255,.74); line-height: 1.75; font-size: 14px; }
+        .flBody ul{ margin: 0 0 10px 18px; padding:0; color: rgba(255,255,255,.74); line-height: 1.75; font-size: 14px; }
+        .flBody li{ margin: 6px 0; }
+
+        .flItem.isOpen .flBody{ display:block; }
+
+        /* Mobile: images should not be 420px wide (too large). Keep layout readable */
+        @media (max-width: 980px){
+          .flTop{ flex-direction: column; }
+          .flImg{ width: 100%; height: 220px; }
+          .flTitle{ font-size: 18px; }
+          .flHint, .flBody p, .flBody ul{ font-size: 15px; }
+        }
+      </style>
+
+      <div class="flList" id="flourishList">
+
+        <!-- 0) FLOURISH intro -->
+        <div class="flItem">
+          <div class="flTop">
+            <div class="flImg"><img src="assets/media/p9.jpg" alt=""></div>
+            <div class="flHead">
+              <div class="flTitle">FLOURISH</div>
+              <div class="flHint">An integrated reading frame for the whole capability system.</div>
+              <button class="flToggle" type="button" aria-expanded="false">Expand</button>
             </div>
           </div>
-        </div>
-      </article>
-
-      <article class="bar" data-bar="futureproof" tabindex="0" role="button" aria-expanded="false">
-        <div class="barImg" aria-hidden="true"><img src="assets/media/bar_futureproof.jpg" alt=""></div>
-        <div class="barMain">
-          <div class="barTitle">F — Futureproof</div>
-          <div class="barHint">...</div>
-          <div class="barDrop" role="region" aria-label="F — Futureproof details">
-            <div class="barDropInner">
-              <div class="barDropTitle">F — Futureproof</div>
-              <div class="barDropText">Futureproof is a capacity to stay stable under disruption and regenerate after shocks. Shock resistance: contain losses fast, protect the baseline, keep essential functions running. Transformability: convert crisis into learning inputs, convert confusion into workable order. Antifragility: rebound with upgraded resilience rather than returning to the previous state. Its foundation is meta-capability: sensing, regulation, learning, collaboration, and renewal under changing conditions.</div>
-            </div>
+          <div class="flBody">
+            <p>FLOURISH frames capability as a regenerating system, supported by verifiable evidence and transparent standards.</p>
+            <p>Each letter names a core capability lens, and together they form an audit-ready growth logic designed for uncertainty and long-term credibility.</p>
           </div>
         </div>
-      </article>
 
-      <article class="bar" data-bar="lifelearning" tabindex="0" role="button" aria-expanded="false">
-        <div class="barImg" aria-hidden="true"><img src="assets/media/bar_lifelearning.jpg" alt=""></div>
-        <div class="barMain">
-          <div class="barTitle">L — Life learning</div>
-          <div class="barHint">...</div>
-          <div class="barDrop" role="region" aria-label="L — Life learning details">
-            <div class="barDropInner">
-              <div class="barDropTitle">L — Life learning</div>
-              <div class="barDropText">Life learning treats living experience as a continuous growth engine. Learning from experience: translate success, failure, conflict, and calm into transferable insight. Meta-learning: refine how learning happens, upgrade strategies from reflection to systemic review. Life-as-learning: integrate learning into everyday choices, conversations, and habits. It supports progression across levels by strengthening reflection, review, and behavioral consolidation.</div>
+        <!-- 1) F -->
+        <div class="flItem">
+          <div class="flTop">
+            <div class="flImg"><img src="assets/media/p1.jpg" alt=""></div>
+            <div class="flHead">
+              <div class="flTitle">F — Futureproof</div>
+              <div class="flHint">Stability under disruption, and renewal after shocks.</div>
+              <button class="flToggle" type="button" aria-expanded="false">Expand</button>
             </div>
           </div>
-        </div>
-      </article>
-
-      <article class="bar" data-bar="omnibound" tabindex="0" role="button" aria-expanded="false">
-        <div class="barImg" aria-hidden="true"><img src="assets/media/bar_omnibound.jpg" alt=""></div>
-        <div class="barMain">
-          <div class="barTitle">O — Omnibound</div>
-          <div class="barHint">...</div>
-          <div class="barDrop" role="region" aria-label="O — Omnibound details">
-            <div class="barDropInner">
-              <div class="barDropTitle">O — Omnibound</div>
-              <div class="barDropText">Omnibound combines cross-context applicability with respect for cultural boundaries. Beyond boundaries: operate across cultures, regions, and ideologies through capability-focused criteria. With boundaries: protect differences, preserve local meanings, and avoid flattening diversity. It expresses a meta-neutral stance: the framework carries no single moral center, yet it supports many value systems as equal nodes.</div>
-            </div>
+          <div class="flBody">
+            <p>Futureproof is a capacity to stay stable under disruption and regenerate after shocks.</p>
+            <ul>
+              <li><strong>Shock resistance:</strong> contain losses fast, protect the baseline, keep essential functions running.</li>
+              <li><strong>Transformability:</strong> convert crisis into learning inputs, convert confusion into workable order.</li>
+              <li><strong>Antifragility:</strong> rebound with upgraded resilience rather than returning to the previous state.</li>
+            </ul>
+            <p>Its foundation is meta-capability: sensing, regulation, learning, collaboration, and renewal under changing conditions.</p>
           </div>
         </div>
-      </article>
 
-      <article class="bar" data-bar="unity" tabindex="0" role="button" aria-expanded="false">
-        <div class="barImg" aria-hidden="true"><img src="assets/media/bar_unity.jpg" alt=""></div>
-        <div class="barMain">
-          <div class="barTitle">U — Unity of systems</div>
-          <div class="barHint">...</div>
-          <div class="barDrop" role="region" aria-label="U — Unity of systems details">
-            <div class="barDropInner">
-              <div class="barDropTitle">U — Unity of systems</div>
-              <div class="barDropText">Unity of systems links five domains into one operating network: body, emotion, cognition, social relations, and environment. The modules function as key nodes in a feedback structure: body shapes emotion, emotion shapes judgment, judgment shapes social choice, social choice shapes environmental impact. Unity is measured by reinforcement loops: stability under fatigue, clarity under stress, responsibility under pressure. This produces a capability ecosystem where parts strengthen each other.</div>
+        <!-- 2) L -->
+        <div class="flItem">
+          <div class="flTop">
+            <div class="flImg"><img src="assets/media/p2.jpg" alt=""></div>
+            <div class="flHead">
+              <div class="flTitle">L — Life learning</div>
+              <div class="flHint">Living experience as a continuous growth engine.</div>
+              <button class="flToggle" type="button" aria-expanded="false">Expand</button>
             </div>
           </div>
-        </div>
-      </article>
-
-      <article class="bar" data-bar="regeneration" tabindex="0" role="button" aria-expanded="false">
-        <div class="barImg" aria-hidden="true"><img src="assets/media/bar_regeneration.jpg" alt=""></div>
-        <div class="barMain">
-          <div class="barTitle">R — Regeneration</div>
-          <div class="barHint">...</div>
-          <div class="barDrop" role="region" aria-label="R — Regeneration details">
-            <div class="barDropInner">
-              <div class="barDropTitle">R — Regeneration</div>
-              <div class="barDropText">Regeneration builds capacity to recover and upgrade after imbalance. Self: restore energy, repair strain, install safeguards that reduce repeated depletion. Systems: rebuild trust through clearer rules and better coordination after conflict or failure. Society: improve structures after disruption so collective wellbeing rises in concrete ways. Regeneration strengthens long-term resilience and turns breakdown into redesign.</div>
-            </div>
+          <div class="flBody">
+            <p>Life learning treats living experience as a continuous growth engine.</p>
+            <ul>
+              <li><strong>Learning from experience:</strong> translate success, failure, conflict, and calm into transferable insight.</li>
+              <li><strong>Meta-learning:</strong> refine how learning happens, upgrade strategies from reflection to systemic review.</li>
+              <li><strong>Life-as-learning:</strong> integrate learning into everyday choices, conversations, and habits.</li>
+            </ul>
+            <p>It supports progression across levels by strengthening reflection, review, and behavioral consolidation.</p>
           </div>
         </div>
-      </article>
 
-      <article class="bar" data-bar="integrity" tabindex="0" role="button" aria-expanded="false">
-        <div class="barImg" aria-hidden="true"><img src="assets/media/bar_integrity.jpg" alt=""></div>
-        <div class="barMain">
-          <div class="barTitle">I — Integrity</div>
-          <div class="barHint">...</div>
-          <div class="barDrop" role="region" aria-label="I — Integrity details">
-            <div class="barDropInner">
-              <div class="barDropTitle">I — Integrity</div>
-              <div class="barDropText">Integrity is a trust infrastructure built from three alignments. Person: consistency between words and actions, public and private behavior. Process: transparent procedures, traceable decisions, auditable outcomes. Purpose: mission stability, value alignment across operations and communications. In certification, integrity appears as evidence authenticity, scoring fairness, and governance consistency.</div>
+        <!-- 3) O -->
+        <div class="flItem">
+          <div class="flTop">
+            <div class="flImg"><img src="assets/media/p3.jpg" alt=""></div>
+            <div class="flHead">
+              <div class="flTitle">O — Omnibound</div>
+              <div class="flHint">Cross-context applicability with respect for boundaries.</div>
+              <button class="flToggle" type="button" aria-expanded="false">Expand</button>
             </div>
           </div>
-        </div>
-      </article>
-
-      <article class="bar" data-bar="sustainability" tabindex="0" role="button" aria-expanded="false">
-        <div class="barImg" aria-hidden="true"><img src="assets/media/bar_sustainability.jpg" alt=""></div>
-        <div class="barMain">
-          <div class="barTitle">S — Sustainability</div>
-          <div class="barHint">...</div>
-          <div class="barDrop" role="region" aria-label="S — Sustainability details">
-            <div class="barDropInner">
-              <div class="barDropTitle">S — Sustainability</div>
-              <div class="barDropText">Sustainability is a repeatable logic that keeps value cycles running over time. Time sustainability: decisions preserve future options and avoid long-term depletion. Relational sustainability: interactions build trust capital rather than consuming it. Resource sustainability: minimal necessary cost supports durable outcomes. Evidence-first evaluation supports sustainability through traceability, auditability, and iteration.</div>
-            </div>
+          <div class="flBody">
+            <p>Omnibound combines cross-context applicability with respect for cultural boundaries.</p>
+            <ul>
+              <li><strong>Beyond boundaries:</strong> operate across cultures, regions, and ideologies through capability-focused criteria.</li>
+              <li><strong>With boundaries:</strong> protect differences, preserve local meanings, and avoid flattening diversity.</li>
+            </ul>
+            <p>It expresses a meta-neutral stance: the framework carries no single moral center, yet it supports many value systems as equal nodes.</p>
           </div>
         </div>
-      </article>
 
-      <article class="bar" data-bar="holistic" tabindex="0" role="button" aria-expanded="false">
-        <div class="barImg" aria-hidden="true"><img src="assets/media/bar_holistic.jpg" alt=""></div>
-        <div class="barMain">
-          <div class="barTitle">H — Holistic wellbeing</div>
-          <div class="barHint">...</div>
-          <div class="barDrop" role="region" aria-label="H — Holistic wellbeing details">
-            <div class="barDropInner">
-              <div class="barDropTitle">H — Holistic wellbeing</div>
-              <div class="barDropText">Holistic wellbeing is flourishing across five domains: physical, emotional, cognitive, social, and environmental. Physical: energy, recovery, sustainable functioning. Emotional: stability, resilience, effective regulation. Cognitive: clarity, learning capacity, complexity handling. Social: healthy relationships, collaboration, trust building. Environmental: responsibility, harmony with nature, sustainable action. It serves as both the direction and the measurement lens.</div>
+        <!-- 4) U -->
+        <div class="flItem">
+          <div class="flTop">
+            <div class="flImg"><img src="assets/media/p4.jpg" alt=""></div>
+            <div class="flHead">
+              <div class="flTitle">U — Unity of systems</div>
+              <div class="flHint">Five domains linked into one feedback network.</div>
+              <button class="flToggle" type="button" aria-expanded="false">Expand</button>
             </div>
           </div>
+          <div class="flBody">
+            <p>Unity of systems links five domains into one operating network: body, emotion, cognition, social relations, and environment.</p>
+            <p>The modules function as key nodes in a feedback structure: body shapes emotion, emotion shapes judgment, judgment shapes social choice, social choice shapes environmental impact.</p>
+            <p>Unity is measured by reinforcement loops: stability under fatigue, clarity under stress, responsibility under pressure.</p>
+            <p>This produces a capability ecosystem where parts strengthen each other.</p>
+          </div>
         </div>
-      </article>
+
+        <!-- 5) R -->
+        <div class="flItem">
+          <div class="flTop">
+            <div class="flImg"><img src="assets/media/p5.jpg" alt=""></div>
+            <div class="flHead">
+              <div class="flTitle">R — Regeneration</div>
+              <div class="flHint">Recover and upgrade after imbalance.</div>
+              <button class="flToggle" type="button" aria-expanded="false">Expand</button>
+            </div>
+          </div>
+          <div class="flBody">
+            <p>Regeneration builds capacity to recover and upgrade after imbalance.</p>
+            <ul>
+              <li><strong>Self:</strong> restore energy, repair strain, install safeguards that reduce repeated depletion.</li>
+              <li><strong>Systems:</strong> rebuild trust through clearer rules and better coordination after conflict or failure.</li>
+              <li><strong>Society:</strong> improve structures after disruption so collective wellbeing rises in concrete ways.</li>
+            </ul>
+            <p>Regeneration strengthens long-term resilience and turns breakdown into redesign.</p>
+          </div>
+        </div>
+
+        <!-- 6) I -->
+        <div class="flItem">
+          <div class="flTop">
+            <div class="flImg"><img src="assets/media/p6.jpg" alt=""></div>
+            <div class="flHead">
+              <div class="flTitle">I — Integrity</div>
+              <div class="flHint">Trust infrastructure: person–process–purpose alignment.</div>
+              <button class="flToggle" type="button" aria-expanded="false">Expand</button>
+            </div>
+          </div>
+          <div class="flBody">
+            <p>Integrity is a trust infrastructure built from three alignments.</p>
+            <ul>
+              <li><strong>Person:</strong> consistency between words and actions, public and private behavior.</li>
+              <li><strong>Process:</strong> transparent procedures, traceable decisions, auditable outcomes.</li>
+              <li><strong>Purpose:</strong> mission stability, value alignment across operations and communications.</li>
+            </ul>
+            <p>In certification, integrity appears as evidence authenticity, scoring fairness, and governance consistency.</p>
+          </div>
+        </div>
+
+        <!-- 7) S -->
+        <div class="flItem">
+          <div class="flTop">
+            <div class="flImg"><img src="assets/media/p7.jpg" alt=""></div>
+            <div class="flHead">
+              <div class="flTitle">S — Sustainability</div>
+              <div class="flHint">Repeatable value cycles over time.</div>
+              <button class="flToggle" type="button" aria-expanded="false">Expand</button>
+            </div>
+          </div>
+          <div class="flBody">
+            <p>Sustainability is a repeatable logic that keeps value cycles running over time.</p>
+            <ul>
+              <li><strong>Time sustainability:</strong> decisions preserve future options and avoid long-term depletion.</li>
+              <li><strong>Relational sustainability:</strong> interactions build trust capital rather than consuming it.</li>
+              <li><strong>Resource sustainability:</strong> minimal necessary cost supports durable outcomes.</li>
+            </ul>
+            <p>Evidence-first evaluation supports sustainability through traceability, auditability, and iteration.</p>
+          </div>
+        </div>
+
+        <!-- 8) H -->
+        <div class="flItem">
+          <div class="flTop">
+            <div class="flImg"><img src="assets/media/p8.jpg" alt=""></div>
+            <div class="flHead">
+              <div class="flTitle">H — Holistic wellbeing</div>
+              <div class="flHint">Flourishing across five domains.</div>
+              <button class="flToggle" type="button" aria-expanded="false">Expand</button>
+            </div>
+          </div>
+          <div class="flBody">
+            <p>Holistic wellbeing is flourishing across five domains: physical, emotional, cognitive, social, and environmental.</p>
+            <ul>
+              <li><strong>Physical:</strong> energy, recovery, sustainable functioning.</li>
+              <li><strong>Emotional:</strong> stability, resilience, effective regulation.</li>
+              <li><strong>Cognitive:</strong> clarity, learning capacity, complexity handling.</li>
+              <li><strong>Social:</strong> healthy relationships, collaboration, trust building.</li>
+              <li><strong>Environmental:</strong> responsibility, harmony with nature, sustainable action.</li>
+            </ul>
+            <p>It serves as both the direction and the measurement lens.</p>
+          </div>
+        </div>
+
+        <!-- 9) Integrated -->
+        <div class="flItem">
+          <div class="flTop">
+            <div class="flImg"><img src="assets/media/p9.jpg" alt=""></div>
+            <div class="flHead">
+              <div class="flTitle">FLOURISH — Integrated reading</div>
+              <div class="flHint">How the eight lenses form one audit-ready growth logic.</div>
+              <button class="flToggle" type="button" aria-expanded="false">Expand</button>
+            </div>
+          </div>
+          <div class="flBody">
+            <p>Futureproof sets the shock-handling baseline. Life learning drives continual upgrade. Omnibound enables cross-cultural application with boundary respect.</p>
+            <p>Unity of systems connects domains into reinforcing loops. Regeneration upgrades the system after imbalance. Integrity protects trust through person–process–purpose alignment.</p>
+            <p>Sustainability keeps decisions and evaluation repeatable over time. Holistic wellbeing provides the outcome lens across five domains.</p>
+            <p>The result is an audit-ready growth logic designed for uncertainty and long-term credibility.</p>
+          </div>
+        </div>
+
       </div>
+
+      <!-- ✅ small JS: expand/collapse -->
+      <script>
+        (function(){
+          const root = document.getElementById('flourishList');
+          if(!root) return;
+          root.querySelectorAll('.flItem').forEach(item=>{
+            const btn = item.querySelector('.flToggle');
+            if(!btn) return;
+            btn.addEventListener('click', ()=>{
+              const isOpen = item.classList.toggle('isOpen');
+              btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+              btn.textContent = isOpen ? 'Collapse' : 'Expand';
+            });
+          });
+        })();
+      </script>
+
     </div>
   </div>
 </section>
