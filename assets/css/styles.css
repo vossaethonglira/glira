@@ -260,3 +260,80 @@ img{
 .barImg, .tile img, .heroImg{
   outline: 2px solid rgba(60,255,60,.35) !important;
 }
+.featureBlock{
+  overflow:hidden;
+  margin-top:28px;
+  border-radius:20px;
+}
+
+.featureMedia{
+  position:relative;
+  aspect-ratio:16 / 9;
+  overflow:hidden;
+  background:#d9d9d9;
+}
+
+.featureMedia img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transform:scale(1.01);
+}
+
+.featureOverlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to bottom,
+    rgba(0,0,0,.18) 0%,
+    rgba(0,0,0,.12) 35%,
+    rgba(0,0,0,.34) 100%
+  );
+  pointer-events:none;
+}
+
+.featureBadge{
+  position:absolute;
+  left:20px;
+  bottom:18px;
+  z-index:2;
+  display:inline-flex;
+  align-items:center;
+  min-height:34px;
+  padding:0 12px;
+  border-radius:999px;
+  background:rgba(255,255,255,.88);
+  color:#222;
+  font-size:.84rem;
+  letter-spacing:.02em;
+  box-shadow:0 4px 18px rgba(0,0,0,.08);
+  backdrop-filter:blur(4px);
+}
+
+.featureBody{
+  padding-top:22px;
+}
+
+.featureBody .h2{
+  margin-top:0;
+}
+
+@media (max-width: 768px){
+  .featureBlock{
+    margin-top:22px;
+    border-radius:16px;
+  }
+
+  .featureBadge{
+    left:14px;
+    bottom:14px;
+    font-size:.78rem;
+    min-height:30px;
+    padding:0 10px;
+  }
+
+  .featureBody{
+    padding-top:18px;
+  }
+}
