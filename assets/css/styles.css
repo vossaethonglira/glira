@@ -566,20 +566,23 @@ img{max-width:100%;display:block}
     letter-spacing:.14em;
   }
 }
-.p,
-.tileHint,
-.barTeaser,
-.barDropText,
-.heroSubline {
+.izyworldPage .heroSubline,
+.izyworldPage .p,
+.izyworldPage .barTeaser,
+.izyworldPage .barDropText {
   text-align: justify;
-  text-justify: inter-word;
-  line-height: 1.75;
+  line-height: 1.8;
 }
 
-.heroTitle,
-.h2,
-.barTitle,
-.barDropTitle,
-.tileTitle {
+.izyworldPage .p,
+.izyworldPage .barDropText {
+  max-width: 920px;
+}
+
+.izyworldPage .heroTitle,
+.izyworldPage .h2,
+.izyworldPage .barTitle,
+.izyworldPage .barDropTitle,
+.izyworldPage .tileTitle {
   text-align: left;
 }
