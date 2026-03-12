@@ -566,3 +566,20 @@ img{max-width:100%;display:block}
     letter-spacing:.14em;
   }
 }
+.p,
+.tileHint,
+.barTeaser,
+.barDropText,
+.heroSubline {
+  text-align: justify;
+  text-justify: inter-word;
+  line-height: 1.75;
+}
+
+.heroTitle,
+.h2,
+.barTitle,
+.barDropTitle,
+.tileTitle {
+  text-align: left;
+}
