@@ -591,3 +591,116 @@ img{max-width:100%;display:block}
 .izyworldPage .tileTitle {
   text-align: left;
 }
+/* =========================
+   MOBILE OVERHAUL PATCH
+   paste at end of styles.css
+   ========================= */
+
+/* 0) global tightening */
+@media (max-width: 520px){
+  .container{ padding: 0 14px; }
+  .section{ padding: 20px 0; }
+  .pad{ padding: 14px; }
+  .h2{ font-size: 20px; }
+  .p{ font-size: 14px; line-height: 1.65; }
+}
+
+/* 1) NAV: single-row scroll instead of wrapping */
+@media (max-width: 980px){
+  .navInner{
+    flex-wrap: nowrap !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding: 10px 0;
+    gap: 8px;
+  }
+  .navInner::-webkit-scrollbar{ display:none; }
+  .navLink{
+    white-space: nowrap;
+    flex: 0 0 auto;
+    font-size: 13px;
+    padding: 7px 10px;
+    border-radius: 12px;
+  }
+}
+
+/* 2) HERO: better height + typography */
+@media (max-width: 520px){
+  .hero{ min-height: 62vh !important; }   /* 原来72–78vh偏高 */
+  .heroInner{ padding: 22px 0 20px; }
+  .brandTopLeft{ top: 10px; left: 12px; font-size: 11px; }
+  .heroTitle{ font-size: 30px; letter-spacing: .01em; }
+  .heroSubline{ font-size: 14px; line-height: 1.6; }
+  .heroCTA{ gap: 8px; }
+  .btn{ padding: 10px 12px; border-radius: 14px; }
+}
+
+/* 3) TILE/ROAD cards: image size and text spacing */
+@media (max-width: 520px){
+  .tile{ border-radius: 18px; }
+  .tile img{
+    aspect-ratio: 16/10;        /* 3/4 在手机太“高”，改更横向 */
+    width: 100%;
+    object-fit: cover;
+  }
+  .tileBody{ padding: 12px; }
+  .tileTitle{ font-size: 15px; }
+  .tileHint{ font-size: 13px; line-height: 1.55; }
+}
+
+/* 4) BAR list (FLOURISH): phone-friendly layout + make drop readable */
+@media (max-width: 980px){
+  :root{
+    --tileTallH: auto;          /* 避免基于vh计算导致怪异高度 */
+    --barImgW: 100%;
+    --barImgH: 210px;           /* 统一一个手机友好高度 */
+  }
+
+  .bar{ padding: 12px; border-radius: 18px; gap: 12px; }
+  .barImg{ height: var(--barImgH) !important; border-radius: 16px; }
+  .barImg img{ object-fit: cover; }       /* contain 容易出现“太小留白” */
+
+  /* 手机上没有 hover：默认让内容可读（如果你已有JS切 isPinned，则不影响） */
+  .barDrop{ display: block; }              /* 让详情默认可见，避免手机看不到 */
+  .barDropInner{ padding: 12px; border-radius: 14px; }
+  .barDropText{ font-size: 14px; line-height: 1.75; }
+}
+
+/* 如果你不想“默认展开”，把上面 .barDrop{display:block;} 改成下面这种更克制：
+@media (max-width: 980px){
+  .barDrop{ display:none; }
+  .bar.isPinned .barDrop{ display:block; }
+}
+*/
+
+/* 5) DOC LIST: prevent overflow, stack button */
+@media (max-width: 520px){
+  .docRow{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+  .docName{
+    word-break: break-word;
+    overflow-wrap: anywhere;
+    line-height: 1.45;
+  }
+  .docBtn{
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* 6) FEATURE blocks on SVOCF: reduce visual heaviness */
+@media (max-width: 520px){
+  .featureBlock{ border-radius: 18px; }
+  .featureMedia{ min-height: 240px; }
+  .featureTextBox{
+    left: 12px; right: 12px; bottom: 12px;
+    padding: 14px;
+    border-radius: 16px;
+  }
+  .featureTitle{ letter-spacing: .03em; }
+  .featureDesc{ font-size: 14px; line-height: 1.6; }
+  .featureBody{ padding: 14px; }
+}
