@@ -704,3 +704,23 @@ img{max-width:100%;display:block}
   .featureDesc{ font-size: 14px; line-height: 1.6; }
   .featureBody{ padding: 14px; }
 }
+.brandTopLeft{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.brandMark{
+  width:22px;
+  height:22px;
+  border-radius:6px;     /* 如果你想圆形就改成 999px */
+  object-fit:contain;
+  opacity:.95;
+}
+
+.brandWord{
+  font-weight:700;
+  letter-spacing:.22em;
+  font-size:12px;
+  opacity:.85;
+}
